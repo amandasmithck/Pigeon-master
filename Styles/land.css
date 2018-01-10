@@ -1,0 +1,396 @@
+﻿
+
+body 
+{
+    font-family: 'Didact Gothic', "Helvetica Neue", Helvetica, Arial,sans-serif;
+}
+
+#datatable {
+    width: 100% !Important;
+}
+
+#container
+{
+    width:auto;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:-40px;
+    
+}
+
+#links-table 
+{
+    text-align:left;
+    font-size:13px;
+    margin-left:auto;
+    margin-right:auto;
+    border: 1px solid #ccc;
+    width:175px;
+    margin-top:10px;
+}
+
+#links-table th
+{
+    font-size:13px;
+    background-color:#000;
+    color:#fff;
+    padding:3px;
+}
+
+#links-table td 
+{
+    padding:1px;
+}
+
+#links-table a
+{
+    margin-right:5px;
+    font-size:13px;
+    color:#008000;
+}
+.link-heading
+{
+    background-color: rgb(232, 232, 232);
+                  
+}
+
+#anounce-slider
+{
+    margin-left:50px;
+}
+
+#anounce-slider div
+{
+    margin-left:0px;
+    margin-bottom:0px;
+    overflow:hidden;
+    text-align:left;
+
+}
+
+.bx-prev
+{
+    margin-left: 20px;
+    font-size: 12px;
+    text-align:right;
+}
+
+.bx-next
+{
+    margin-left: 20px;
+    font-size: 12px;
+    text-align:right;
+}
+.bx-pager
+{
+    font-size: 12px;
+    margin-left:50px;
+    margin-top:0px;
+    float:left;
+    
+}
+#anounce
+{
+    margin-top:10px;
+    font-size: 14px;
+    font-weight:bold;
+    color:Red;
+}
+
+p
+{
+   margin:1px;
+}
+
+.anounce-date
+{
+    font-size: 10px;
+}
+
+.anounce-info
+{
+    font-size: 14px;
+}
+
+hr
+{
+
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+.main 
+{
+    width: 96%;
+-moz-border-radius: 6px;
+border-radius: 6px;
+border: 1px solid #D0D0D0;
+padding: 1%;
+margin-top: 10px;
+overflow: hidden;
+position: relative;
+}
+
+#tools
+{   width:680px;
+    margin-left:auto;
+    margin-right:auto;
+    height:190px;
+    overflow:hidden;
+}
+
+.partNoSearch 
+{
+
+-moz-border-radius: 6px;
+border-radius: 6px;
+border: 1px solid #D0D0D0;
+padding: 1%;
+margin: 0px 1em;
+overflow: hidden;
+position: relative;
+width:200px;
+
+
+}
+.vinNoSearch 
+{
+
+-moz-border-radius: 6px;
+border-radius: 6px;
+border: 1px solid #D0D0D0;
+padding: 1%;
+margin: 5px 1em;
+overflow: hidden;
+position: relative;
+}
+
+#cursorMessageDiv {
+	position: absolute;
+	z-index: 99999;
+	border: solid 1px green;
+	background: #FDFFE4;
+	padding: 2px;
+	margin: 0px;
+	display: none;
+	max-width:200px;
+	font-size:12px;
+}
+
+.searchForm 
+{
+
+    overflow:hidden;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#pricing
+{
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #D0D0D0;
+    margin:5px;
+    text-align:center;
+}
+
+.tblpricing
+{
+   
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:5px;
+    margin-top:5px;
+    padding: 10px;
+    width:500px;
+}
+
+
+
+.tblpricing tbody
+{
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    text-align:left;
+    color:Green;
+}
+
+.heading
+{
+    display:inline;
+    font-family:Arial;
+    font-size:14px;
+   
+}
+
+#pricing-heading
+{
+    letter-spacing:2px;
+    font-weight:bold;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:-10px;
+    margin-top:-5px;
+
+}
+#pricing-label
+{
+    text-transform:uppercase;
+    font-size:12px;
+    line-height:12px;
+}
+
+.parttype
+{
+    color:Red;
+    background-color:#E8E8E8;
+}
+
+.price
+{
+    text-align:right;
+}
+
+.tblheading
+{
+    color:Black;
+    font-weight:bold;
+    text-align:right;
+}
+
+.tools-heading
+{
+    font-weight:bold;
+    font-size: 16px;
+    text-align:center;
+    margin:0px 0 -10px 0;
+    padding:0px;
+}
+
+#applabel
+{
+    text-transform:uppercase;
+    font-size:12px;
+    line-height:12px;
+}
+
+#apptable
+{
+    width:600px;
+    margin-right:auto;
+    margin-left:auto;
+}
+#apps
+{
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #D0D0D0;
+    margin:5px;
+    background-color:White;
+    height:16px;
+    text-align:center;
+    overflow:hidden;
+}
+
+#apps:hover
+{
+  color:Blue;
+}
+
+
+
+
+#tblApp
+{
+   
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:5px;
+    margin-top:5px;
+    padding: 10px;
+
+}
+
+#tblApp td
+{
+  
+    padding: 5px;
+
+}
+
+#tblApp th
+{
+  
+    padding: 5px;
+
+}
+
+
+
+#tblApp tbody
+{
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    text-align:center;
+    color:Green;
+}
+
+#tblApp_filter label input 
+{
+    display:inline;
+    font-size:12px;
+    height:14px;
+    width:70px;
+}
+
+#tblApp_filter
+{
+    margin:0px;
+}
+
+#tblApp_filter label
+{
+
+    font-size:12px;
+    line-height:14px;
+}
+
+#apps p
+{
+    background:#E8E8E8;
+}
+#pricing p
+{
+    background:#E8E8E8;
+}
+
+#Quick-links
+{
+    width: 1000px;
+    height:200px;
+
+}
+
+.hoverscroll 
+{
+    margin-top:40px;
+    margin-left:20px;
+}
+
+
+#Quick-links img
+{
+   width: 150px;
+
+}
+
+#Quick-links .ui-widget-content  
+{
+    border: none !important; 
+    background: white !important; 
+    color: #222222; 
+    }

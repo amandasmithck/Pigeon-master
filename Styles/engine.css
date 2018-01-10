@@ -1,0 +1,100 @@
+﻿.searchbar select {width: 120px; padding: 4px;margin-bottom: 4px;}
+.searchbar label {width: 100%; font-size: 12px;}
+.searchbar input[type=submit] {width: 100%; padding: 4px;}
+
+.price {color: green;font-size: 12px;}
+
+.result 
+{
+    -moz-border-radius: 6px; border-radius: 6px;
+    border: 1px solid #D0D0D0;
+    padding:2%;
+    overflow: hidden;
+    position: relative;
+}
+
+.result h1 {min-width: 25%;float: left;margin-right: 1em;}
+
+.result .details
+{
+    width: auto;
+    position: relative;
+    width: 100%;
+    height: 100%; 
+}
+.result .loading-twirl
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.result .details .loading-twirl .loading-overlay
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /*background: white;*/
+}
+.result .details .loading-twirl img
+{ 
+    position: relative;
+    left: 110px;
+    top: 84px;
+}
+.result > .overlay 
+{
+    position: absolute;
+    /*background: #EEE;*/
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: 5;
+}
+
+.map
+{
+    display:inline;
+    float:left;
+    margin-left:0px;
+    width:50%;
+    padding-right: 2%;
+}
+
+.seprow
+{
+    background-color:black;
+    color:White;
+    font-weight:bold;
+}
+
+.selectlabel
+{
+    margin:0;
+    padding:0;
+    font-size:10px;
+    color:Blue;
+}
+
+.loader p
+{
+    font-size: 20px;
+    color:Blue;
+    padding: 2px;
+    text-transform:capitalize;
+}
+.loader img 
+{
+    float:left;
+    margin-right: 5px;
+}
+
+.pics img
+{
+    height:80px;
+}
+
+thead {font-weight:bold;}

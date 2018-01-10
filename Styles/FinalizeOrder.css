@@ -1,0 +1,93 @@
+﻿#UserInfo
+{
+    width:850px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#tblinfo
+{
+    width:850px;
+    overflow:hidden;
+    font-size:12px;
+}
+
+#tblinfo td
+{
+    padding-right:50px;
+    overflow:hidden;
+}
+
+
+#tblparts 
+{
+    width:850px;
+    border: 1px solid black;
+    font-size:12px;
+
+}
+
+#tblparts thead tr 
+{
+    border: 1px solid black;
+    text-align:center;
+}
+
+td .form
+{
+    
+    font-size:10px;
+}
+
+#tblparts td 
+{
+    padding:4px;
+    text-align:center;
+}
+
+#tblparts tfoot tr 
+{
+    border: 1px solid black;
+    text-align:center;
+}
+
+.checkout 
+{
+    background-color: #4a8ee5;
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #4a8ee5),color-stop(1, #3a75cc));
+    background-image: -moz-linear-gradient(top, #4a8ee5, #3a75cc);
+    width: 25%;
+    float: right;
+    text-align: center;
+    color: white;
+    padding: 0.6em;
+    cursor: pointer;
+}
+
+.checkout:hover{text-decoration:none;background-image:none;background-color:#55a0ff;}
+
+.attention 
+{
+    
+    background-color:#C0D8D8;
+    font-weight:bold;
+}
+
+.total 
+{
+    background-color:#C3FDB8;
+    font-weight:bold;
+}
+
+.loader p
+{
+    font-size: 20px;
+    color:Blue;
+    padding: 2px;
+    line-height: 24px;
+}
+.loader img 
+{
+    float:left;
+    margin-right: 5px;
+}

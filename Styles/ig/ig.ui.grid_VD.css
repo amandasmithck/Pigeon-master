@@ -1,0 +1,92 @@
+/* css for grid widget */
+
+.ui-iggrid {
+    background-image: none;
+	border:none;
+	font-size: 12px;
+}
+.ui-iggrid .ui-iggrid-headertable, .ui-iggrid .ui-iggrid-content, .ui-iggrid .ui-widget-content {
+    border-collapse:collapse;
+}
+.ui-iggrid-scrolldiv table {border:none;}
+.ui-iggrid .ui-iggrid-content {
+    width: 100%;	
+}
+
+.ui-iggrid .ui-iggrid-headercaption, .ui-iggrid .ui-iggrid-footer, .ui-iggrid .ui-iggrid-toolbar {
+    padding: 0.6em 0.4em;text-align: center;
+}
+
+.ui-iggrid th.ui-state-default, .ui-iggrid th.ui-state-hover, .ui-iggrid th.ui-state-active, 
+.ui-iggrid th.ui-state-default a, .ui-iggrid th.ui-state-hover a, .ui-iggrid th.ui-state-active a {font-weight: normal; text-align:left;}
+
+.ui-iggrid .ui-iggrid-footer, .ui-iggrid .ui-iggrid-toolbar {
+	font-weight: normal;
+    text-align: left;
+	display:block;
+}
+
+.ui-iggrid th, .ui-iggrid th.ui-state-default, .ui-iggrid th.ui-state-hover, .ui-iggrid th.ui-state-active {text-align:left;}
+.ui-iggrid table tbody td, .ui-iggrid .ui-iggrid-header, .ui-iggrid table th {
+    padding: 4px; font-size: 12px;
+}
+.ui-iggrid .ui-iggrid-content td {border-left:none!important; border-right:none!important;}
+
+.ui-iggrid table thead a {
+    display: block; text-decoration:none; 
+}
+
+.ui-iggrid td.ui-state-highlight, .ui-iggrid td.ui-state-hover{
+	border:none;
+	font-weight:normal;
+	font-size: 12px;
+}
+.ui-iggrid td.ui-state-highlight p {font-size: 12px;}
+
+.ui-iggrid .ui-iggrid-footer .ui-state-default, .ui-iggrid .ui-iggrid-toolbar .ui-state-default, .ui-iggrid .ui-iggrid-footer .ui-state-default a, .ui-iggrid .ui-iggrid-toolbar .ui-state-default a {text-decoration:none;}
+
+.ui-iggrid .ui-iggrid-toolbar .ui-iggrid-results {
+    float: right;
+}
+.ui-iggrid .ui-iggrid-footer .ui-iggrid-results {
+    float: left;
+}
+.ui-iggrid .ui-icon, .ui-iggrid .ui-iggrid-paging {
+    float: right;
+}
+.ui-iggrid .ui-iggrid-paging div, .ui-iggrid .ui-iggrid-paging span,  .ui-iggrid .ui-iggrid-paging li, .ui-iggrid .ui-iggrid-paging input, .ui-iggrid .ui-iggrid-results span, .ui-iggrid .ui-iggrid-results input{
+    float: left; padding:0 3px;
+}
+.ui-iggrid .ui-iggrid-paging .ui-icon, .ui-iggrid .ui-iggrid-results .ui-icon{
+    padding:0; 
+}
+.ui-iggrid .ui-iggrid-paging-item, .ui-iggrid .ui-iggrid-results-item{
+    float: left;
+    height: 16px;
+}
+.ui-iggrid .ui-iggrid-paging-item span {cursor:pointer;}
+
+.ui-iggrid-pagelist {padding: 0 6px;}
+.ui-iggrid-pagelist li {margin:0 1px;}
+
+.ui-iggrid .ui-iggrid-filterbutton {float:left;}
+
+/* remove paddings in nested tables */
+.ui-iggrid-layout-helper>tbody>tr>td  {padding:0!important; background:none transparent!important;}
+.ui-iggrid-filtercell  {padding:4px 0!important; background:#fff!important;white-space: nowrap; } 
+.ui-iggrid-filtercell .ui-igedit-field {text-align:left!important; font-size:12px!important;} 
+.ui-iggrid-scrolldiv {border-top:none!important}
+.ui-iggrid-scrolldiv tbody {border:none!important}
+
+
+.ui-iggrid-sortableheader, .ui-iggrid-headertext
+{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+ 
+.ui-iggrid-sortableheader a, .ui-iggrid-headertext span
+{
+    padding-right: 4px !important;
+    padding-left: 4px !important;
+}

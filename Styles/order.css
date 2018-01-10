@@ -1,0 +1,46 @@
+﻿.order-text
+{
+    padding-top: 5px;
+    font-size: 12px !important;
+}
+
+.order-label
+{
+    font-weight: bold;
+    font-size: 12px !important;
+}
+
+.invoice-pay-type, .select-pay-type, .drive-type, .select-drive-type
+{
+    font-size: 12px !important;
+}
+
+.sorting_1
+{
+    background-color: none !important;
+}
+
+.profit
+{
+    margin-top: 25px;
+    font-size: 11px;
+}
+
+.no-bottom-margin
+{
+    margin-bottom: 5px !important;
+}
+
+.partorder input[type="text"], input[type="number"]
+{
+    width: 120px;
+    font-size: 11px;
+}
+
+.partorder label
+{
+    font-size: 11px;
+}
+
+
+

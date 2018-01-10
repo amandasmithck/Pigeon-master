@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://smtc.certifiedtransmission.com/app/wcf/external/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://smtc.certifiedtransmission.com/app/wcf/external/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://smtc.certifiedtransmission.com/app/wcf/external/Imports">
+      <xsd:import schemaLocation="http://smtc.certifiedtransmission.com/app/WCF/External/Lookup.svc?xsd=xsd0" namespace="http://smtc.certifiedtransmission.com/app/wcf/external/" />
+      <xsd:import schemaLocation="http://smtc.certifiedtransmission.com/app/WCF/External/Lookup.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://smtc.certifiedtransmission.com/app/WCF/External/Lookup.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://smtc.certifiedtransmission.com/app/WCF/External/Lookup.svc?xsd=xsd3" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILookup_GetInventoryCTRByManyPart_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryCTRByManyPart" />
+  </wsdl:message>
+  <wsdl:message name="ILookup_GetInventoryCTRByManyPart_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryCTRByManyPartResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookup_GetInventoryCTR_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryCTR" />
+  </wsdl:message>
+  <wsdl:message name="ILookup_GetInventoryCTR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInventoryCTRResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookup_GetInstallationKit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstallationKit" />
+  </wsdl:message>
+  <wsdl:message name="ILookup_GetInstallationKit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstallationKitResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookup_GetAllInstallationKits_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInstallationKits" />
+  </wsdl:message>
+  <wsdl:message name="ILookup_GetAllInstallationKits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllInstallationKitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookup_GetWarnings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWarnings" />
+  </wsdl:message>
+  <wsdl:message name="ILookup_GetWarnings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWarningsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILookup_GetAllWarnings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWarnings" />
+  </wsdl:message>
+  <wsdl:message name="ILookup_GetAllWarnings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWarningsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILookup">
+    <wsdl:operation name="GetInventoryCTRByManyPart">
+      <wsdl:input wsaw:Action="http://smtc.certifiedtransmission.com/app/wcf/external/ILookup/GetInventoryCTRByManyPart" message="tns:ILookup_GetInventoryCTRByManyPart_InputMessage" />
+      <wsdl:output wsaw:Action="http://smtc.certifiedtransmission.com/app/wcf/external/ILookup/GetInventoryCTRByManyPartResponse" message="tns:ILookup_GetInventoryCTRByManyPart_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInventoryCTR">
+      <wsdl:input wsaw:Action="http://smtc.certifiedtransmission.com/app/wcf/external/ILookup/GetInventoryCTR" message="tns:ILookup_GetInventoryCTR_InputMessage" />
+      <wsdl:output wsaw:Action="http://smtc.certifiedtransmission.com/app/wcf/external/ILookup/GetInventoryCTRResponse" message="tns:ILookup_GetInventoryCTR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstallationKit">
+      <wsdl:input wsaw:Action="http://smtc.certifiedtransmission.com/app/wcf/external/ILookup/GetInstallationKit" message="tns:ILookup_GetInstallationKit_InputMessage" />
+      <wsdl:output wsaw:Action="http://smtc.certifiedtransmission.com/app/wcf/external/ILookup/GetInstallationKitResponse" message="tns:ILookup_GetInstallationKit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllInstallationKits">
+      <wsdl:input wsaw:Action="http://smtc.certifiedtransmission.com/app/wcf/external/ILookup/GetAllInstallationKits" message="tns:ILookup_GetAllInstallationKits_InputMessage" />
+      <wsdl:output wsaw:Action="http://smtc.certifiedtransmission.com/app/wcf/external/ILookup/GetAllInstallationKitsResponse" message="tns:ILookup_GetAllInstallationKits_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWarnings">
+      <wsdl:input wsaw:Action="http://smtc.certifiedtransmission.com/app/wcf/external/ILookup/GetWarnings" message="tns:ILookup_GetWarnings_InputMessage" />
+      <wsdl:output wsaw:Action="http://smtc.certifiedtransmission.com/app/wcf/external/ILookup/GetWarningsResponse" message="tns:ILookup_GetWarnings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWarnings">
+      <wsdl:input wsaw:Action="http://smtc.certifiedtransmission.com/app/wcf/external/ILookup/GetAllWarnings" message="tns:ILookup_GetAllWarnings_InputMessage" />
+      <wsdl:output wsaw:Action="http://smtc.certifiedtransmission.com/app/wcf/external/ILookup/GetAllWarningsResponse" message="tns:ILookup_GetAllWarnings_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

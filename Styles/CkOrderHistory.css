@@ -1,0 +1,136 @@
+﻿
+
+#links
+{
+    margin-right:auto;
+    margin-left:auto;
+    background:white;
+    display:block;
+    width:420px;
+    margin-top:10px;
+}
+
+
+#New 
+{
+    
+    width:1140px;
+      margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10px;
+
+}
+
+#InRoute 
+{
+   
+    width:1140px;
+      margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10px;
+    overflow:hidden;
+}
+
+#Arrived
+{
+    
+    width:1140px;
+      margin-left:auto;
+    margin-right:auto;
+}
+
+.tblheading
+{
+    text-align:center;
+}
+
+.history
+{
+    font-size:12px;
+    font-family:Arial;
+  
+}
+
+#loading-overlay
+{
+    font-size: 20px;
+    color:Blue;
+    padding: 2px;
+    text-transform:capitalize;
+    line-height:40px;
+    font-family:Arial;
+}
+
+.history td
+{
+    min-width:130px;
+    margin:5px;
+    padding:4px;
+}
+
+.history thead td
+{
+    text-align:center;
+    border:none;
+}
+
+.DataTables_sort_icon
+{
+    float:right;
+}
+
+.histable tr:hover 
+{
+    background:lightblue !important;
+    cursor:pointer;
+    
+}
+
+
+#tblorder thead
+{
+    background:lightblue;
+    
+}
+#tblorder td
+{
+    min-width:70px;
+    margin: 5px;
+    padding: 3px;
+}
+
+.history .ui-corner-left
+{
+    float:left;
+}
+.history .ui-corner-right
+{
+    float:right;
+}
+
+paging_two_button
+{
+    float:right;
+}
+#tblArrived_info
+{
+    margin:5px;
+    font-size:14px;
+    line-height:14px;
+    padding:0px;
+    
+}
+#tblroute_info
+{
+    margin:5px;
+    font-size:12px;
+    line-height:12px;
+    padding:0px;
+}
+#tblnew_info
+{
+    margin:5px;
+    font-size:12px;
+    line-height:12px;
+    padding:0px;
+}

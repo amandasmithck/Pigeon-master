@@ -1,0 +1,106 @@
+﻿Imports System.Web.SessionState
+Imports System.Reflection
+Imports System.Web.HttpRequest
+Imports Pigeon.Pigeon
+
+Public Class Global_asax
+    Inherits System.Web.HttpApplication
+
+    Sub Application_Start(ByVal sender As Object, ByVal e As EventArgs)
+        ' Fires when the application is started
+
+    End Sub
+
+    Sub Session_Start(ByVal sender As Object, ByVal e As EventArgs)
+        ' Fires when the session is started
+        Dim UserIPAddress
+        UserIPAddress = Request.ServerVariables("HTTP_X_FORWARDED_FOR")
+        If UserIPAddress = "" Then
+            UserIPAddress = Request.ServerVariables("REMOTE_ADDR")
+        End If
+
+        Application("IP") = UserIPAddress
+    End Sub
+
+    Sub Application_BeginRequest(ByVal sender As Object, ByVal e As EventArgs)
+        ' Fires at the beginning of each request
+
+        Select Case HttpContext.Current.Request.Url.Host
+            Case "tracyind.ckautoparts.com", "www.tracyind.ckautoparts.com", "www.tecpowertrain.com", "tecpowertrain.com", "tracybeta.ckautoparts.com", "www.tracybeta.ckautoparts.com" 'Tracy
+                SetProviderConnectionString(ConfigurationManager.ConnectionStrings("TracyConnectionString").ConnectionString)
+                Application("Client") = "Tracy"
+                Application("Folder") = "Assets/Tracy/"
+                Application("ConnectionString") = "TracyConnectionString"
+
+            Case "autowayparts.com", "www.autowayparts.com", "autowaypartscenterclearwater.com", "www.autowaypartscenterclearwater.com", "autowaybeta.ckautoparts.com", "www.autowaybeta.ckautoparts.com" 'Autoway
+                SetProviderConnectionString(ConfigurationManager.ConnectionStrings("AutowayConnectionString").ConnectionString)
+                Application("Client") = "Autoway"
+                Application("Folder") = "Assets/Autoway/"
+                Application("ConnectionString") = "AutowayConnectionString"
+
+
+            Case "larryhmillerpowertrain.com", "www.larryhmillerpowertrain.com", "larrymillerbeta.ckautoparts.com", "www.larrymillerbeta.ckautoparts.com" 'Larry Miller
+                SetProviderConnectionString(ConfigurationManager.ConnectionStrings("LarryMillerConnectionString").ConnectionString)
+                Application("Client") = "LarryMiller"
+                Application("Folder") = "Assets/LarryMiller/"
+                Application("ConnectionString") = "LarryMillerConnectionString"
+
+            Case "gopartscenter.com", "www.gopartscenter.com", "gobeta.ckautoparts.com", "www.gobeta.ckautoparts.com" 'Go
+                SetProviderConnectionString(ConfigurationManager.ConnectionStrings("GOConnectionString").ConnectionString)
+                Application("Client") = "GO"
+                Application("Folder") = "Assets/GO/"
+                Application("ConnectionString") = "GOConnectionString"
+
+
+            Case "ims.ckautoparts.com", "www.ims.ckautoparts.com", "parts.ckautoparts.com", "www.parts.ckautoparts.com"
+                SetProviderConnectionString(ConfigurationManager.ConnectionStrings("PartsManagerConnectionString").ConnectionString)
+                Application("Client") = "CK"
+                Application("Folder") = "Assets/CK/"
+                Application("ConnectionString") = "PartsManagerConnectionString"
+
+            Case "bigvalleypowertrain.com", "www.bigvalleypowertrain.com"
+                SetProviderConnectionString(ConfigurationManager.ConnectionStrings("BigValleyConnectionString").ConnectionString)
+                Application("Client") = "BigValley"
+                Application("Folder") = "Assets/BigValley/"
+                Application("ConnectionString") = "BigValleyConnectionString"
+
+            Case "localhost"
+<<<<<<< HEAD
+                SetProviderConnectionString(ConfigurationManager.ConnectionStrings("PartsManagerConnectionString").ConnectionString)
+                Application("Client") = "CK"
+                Application("Folder") = "Assets/CK/"
+                Application("ConnectionString") = "PartsManagerConnectionString"
+=======
+                SetProviderConnectionString(ConfigurationManager.ConnectionStrings("AutowayConnectionString").ConnectionString)
+                Application("Client") = "Autoway"
+                Application("Folder") = "Assets/Autoway/"
+                Application("ConnectionString") = "AutowayConnectionString"
+
+>>>>>>> a2d03a6263a4ae53904ab61a3cfd91cdf5b02f4b
+
+
+
+        End Select
+    End Sub
+
+    Sub Application_AuthenticateRequest(ByVal sender As Object, ByVal e As EventArgs)
+        ' Fires upon attempting to authenticate the use
+    End Sub
+
+    Sub Application_Error(ByVal sender As Object, ByVal e As EventArgs)
+        ' Fires when an error occurs
+    End Sub
+
+    Sub Session_End(ByVal sender As Object, ByVal e As EventArgs)
+        ' Fires when the session ends
+    End Sub
+
+    Sub Application_End(ByVal sender As Object, ByVal e As EventArgs)
+        ' Fires when the application ends
+
+    End Sub
+
+
+
+
+End Class

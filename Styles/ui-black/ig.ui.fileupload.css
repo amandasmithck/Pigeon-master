@@ -1,0 +1,262 @@
+.ui-igfileupload
+{
+    border:solid 1px gray; 
+    padding:15px;
+    font-size: 13px;
+}
+
+.ui-igfileupload .ui-igfileupload-browsebutton
+{
+   /*display:block;
+    it should be display:block - otherwise if it is display:inline-block - on show details click - does not work correctly in IE
+    */
+   width: 100px;
+   display:inline-block;
+}
+
+.ui-igfileupload-container
+{
+    /*margin: 15px 0;*/
+    display:block;
+    
+    background:transparent!important;
+    border-left: 0 none !important;
+    border-right: 0 none !important;
+    border-top: 0 none !important;
+    
+    margin-top:15px;
+    padding-bottom:3px;
+}
+    
+    /* Cancel button next to file uploading */
+    .ui-igfileupload-container a
+    {
+        display: inline-block;
+        margin-left: 5px;
+    }
+
+.ui-igfileupload-uploadprogress
+{
+    margin: 10px 0;
+}
+
+
+.ui-igfileupload .ui-igprogressbar 
+{
+    float:left;
+    /*background: none;  */
+    margin-top: 2px;
+    margin-right:5px;
+}
+
+/*  ProgressBar inner HTML  */
+.ui-igfileupload-progressbar-container
+{
+    z-index:10;
+    display:block; 
+    position:absolute;
+    width:100%;
+    
+    line-height: 17px;
+    font-size:13px;
+}
+
+.ui-igfileupload-progressbar-filename
+{
+    float:left;
+}
+
+/* File Extension Icons */
+.ui-igfileupload-progressbar-icon
+{
+    margin:1px 2px 0 2px;     
+    float:left;
+    margin: 1px 5px;
+}
+
+.ui-igfileupload-progressbar-icon-exe
+{   
+    background-image:url("images/ifFUicon_exe.gif");
+    background-repeat:no-repeat;    
+    width:14px;
+    height:15px;
+}
+
+
+.ui-igfileupload-progressbar-icon-default
+{   
+    background-image:url("images/igFUicon_default.png");
+    background-repeat:no-repeat;    
+    width:18px;
+    height:15px;
+}
+
+.ui-igfileupload-progressbar-icon-video
+{   
+    background-image:url("images/igFUicon_video.gif");
+    background-repeat:no-repeat;    
+    width:18px;
+    height:16px;
+}
+
+
+.ui-igfileupload-progressbar-icon-music
+{   
+    margin:1px 2px 0 2px;
+    background-image:url("images/igFUicon_music.gif");
+    background-repeat:no-repeat;    
+    width:18px;
+    height:18px;
+}
+
+.ui-igfileupload-progressbar-icon-images
+{   
+    background-image:url("images/igFUicon_images.gif");
+    background-repeat:no-repeat;    
+    width:17px;
+    height:18px;
+}
+
+.ui-igfileupload-progressbar-icon-docs
+{   
+    background-image:url("images/igFUicon_docs.gif");
+    background-repeat:no-repeat;    
+    width:18px;
+    height:21px;
+}
+/* //File Extension Icons */
+
+
+.ui-igfileupload-progressbar-filesize
+{
+    float:right;
+    margin-right: 5px;  
+}
+
+/*  //ProgressBar inner HTML  */
+
+.ui-igfileupload-clear
+{
+    clear:both;
+}
+
+.ui-igfileupload-summaryprogress 
+{
+    border:solid 1px red;
+    padding:5px;
+}
+
+.ui-igfileuploadmultiple
+{
+    /*border:solid 1px black;*/
+}
+
+.ui-igfileuploadsingle
+{
+    border: solid 1px green;
+}
+.ui-igfileupload-summaryprogressbar
+{
+    float:left;
+}
+
+
+
+
+/* Cancel button for progress bar - single file upload*/
+.ui-igfileupload-cancelbutton
+{
+    display:inline-block;
+    border:solid 1px red;
+    background-image:url("images/igFUSprite.png");
+    background-position: 32px 0;
+    width:32px;
+    height:32px;
+}
+
+.ui-igfileupload-cancelbutton-disabled
+{
+    display:inline-block;    
+    border:solid 1px #00A000;
+    background-image:url("images/igFUSprite.png");
+    background-position: 0 0;
+    width:32px;
+    height:32px;       
+}
+/* //Cancel button for progress bar*/
+
+/* summary information - uploaded files, show/hide buttons */
+.ui-igfileupload-summaryinformation-container
+{
+    margin-bottom:5px;
+    margin-left: 5px;
+    font-size:13px;
+}
+
+.ui-igfileupload-summaryuploadedfiles-label
+{
+}
+
+.ui-igfileupload-showhidedetails-button 
+{
+    margin-left:5px;
+}
+
+/* //summary information - uploaded files, show/hide buttons */
+.ui-igfileupload-summaryprogresscontainer 
+{
+   margin-top: 10px;
+}
+
+    .ui-igfileupload-summaryprogresscontainer a
+    {
+        margin-left:7px;
+        margin-top: -2px;
+    }
+
+.ui-igfileupload-summaryprogress-label 
+{
+    margin-left:5px;
+    font-size:13px;
+}
+
+/* Button Continue/Cancel */
+.ui-igfileupload-button-continue-cancel 
+{
+    width:76px;
+     
+}
+/* Button ClearAllButton */
+.ui-igfileupload-button-clear-all 
+{
+    text-decoration:underline!important;
+    background:none!important;
+    border:none!important;
+    font-size:13px !important;
+    color:inherit!important;
+}
+
+.ui-igfileupload-cancel-button
+{
+    width:16px!important;
+    height:20px!important;
+    margin-top:3px;
+}
+
+
+    .ui-igfileupload-cancel-button .ui-button-icon-primary
+    {
+        background-image: url("images/ui-icons_222222_256x240.png")!important;
+    }
+    .ui-igfileupload-cancel-button.ui-state-hover
+    {
+        width:16px!important;
+        height:20px!important;
+        background:none!important;
+    }
+    
+    /*.ui-igfileupload-cancel-button.ui-state-hover .ui-button-text {  
+        -moz-box-shadow: none; 
+        -webkit-box-shadow: none; 
+        box-shadow: none;
+    }*/

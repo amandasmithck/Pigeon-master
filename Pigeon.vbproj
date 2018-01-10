@@ -1,0 +1,2710 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{4694B58F-3FF8-4736-B72E-7A57C2ADAC85}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Pigeon</RootNamespace>
+    <AssemblyName>Pigeon</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Pigeon.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>Full</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Pigeon.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CreatePickupWebServiceClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\pigeonmaster\Pigeon\bin\CreatePickupWebServiceClient.exe</HintPath>
+    </Reference>
+    <Reference Include="CreatePickupWebServiceClient.XmlSerializers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\pigeonmaster\Pigeon\bin\CreatePickupWebServiceClient.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportViewer.Common.VS2010.10.0.40219.1\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportViewer.WebForms.VS2010.10.0.40219.1\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\Newtonsoft.Json.5.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OEMSmallPartPricing, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CK2\lib\OEMSmallPartPricing.dll</HintPath>
+    </Reference>
+    <Reference Include="openstacknet">
+      <HintPath>packages\openstack.net.1.1.3.2\lib\net40\openstacknet.dll</HintPath>
+    </Reference>
+    <Reference Include="RateWebServiceClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RateWebServiceClient.exe</HintPath>
+    </Reference>
+    <Reference Include="RateWebServiceClient.vshost, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RateWebServiceClient.vshost.exe</HintPath>
+    </Reference>
+    <Reference Include="RateWebServiceClient.XmlSerializers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\RateWebServiceClient.XmlSerializers.dll</HintPath>
+    </Reference>
+    <Reference Include="ShipWebServiceClient">
+      <HintPath>..\..\..\Desktop\ShipService_v2014_vb\vb\ShipWebServiceClient\Express\Domestic\bin\Release\ShipWebServiceClient.exe</HintPath>
+    </Reference>
+    <Reference Include="SimpleRESTServices">
+      <HintPath>packages\SimpleRESTServices.1.1.2.0\lib\net40\SimpleRESTServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.DomainServices.EntityFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="wrangler, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DotNet Library Projects\Wrangler\Wrangler\bin\Release\wrangler.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccountingWebService.asmx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="AdminMaintenance.asmx" />
+    <Content Include="bin\CreatePickupWebServiceClient.exe" />
+    <Content Include="bin\CreatePickupWebServiceClient.vshost.exe" />
+    <Content Include="bin\CreatePickupWebServiceClient.vshost.exe.config" />
+    <Content Include="bin\CreatePickupWebServiceClient.XmlSerializers.dll" />
+    <Content Include="bin\datamanager.dll" />
+    <Content Include="bin\DeleteShipmentWebServiceClient.vshost.exe" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\openstacknet.dll" />
+    <Content Include="bin\Pigeon.dll" />
+    <Content Include="bin\Pigeon.pdb" />
+    <Content Include="bin\Pigeon.xml" />
+    <Content Include="bin\RateWebServiceClient.exe" />
+    <Content Include="bin\RateWebServiceClient.vshost.exe" />
+    <Content Include="bin\RateWebServiceClient.XmlSerializers.dll" />
+    <Content Include="bin\SimpleRESTServices.dll" />
+    <Content Include="CkOrderHistroyWebService.asmx" />
+    <Content Include="Controls\Admin\CKPartsPortal.ascx" />
+    <Content Include="Controls\Admin\PartNoLookup.ascx" />
+    <Content Include="Controls\Admin\PartsPortal.ascx" />
+    <Content Include="Controls\Admin\Tier.ascx" />
+    <Content Include="Controls\Admin\Home.ascx" />
+    <Content Include="Controls\Common\Calculator.ascx" />
+    <Content Include="Controls\Common\VinDecoder.ascx" />
+    <Content Include="Controls\Customer\CKPartsPortal.ascx" />
+    <Content Include="Controls\Customer\Home.ascx" />
+    <Content Include="Controls\Customer\PartsPortal.ascx" />
+    <Content Include="Controls\images\ajax-loader-blue.gif" />
+    <Content Include="CustomerManageWebService.asmx" />
+    <Content Include="DealerCentral.aspx" />
+    <Content Include="DifferentialWebService.asmx" />
+    <Content Include="EmailWebService.asmx" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="HomeWebService.asmx" />
+    <Content Include="Controls\images\acrobat.png" />
+    <Content Include="Controls\images\chart.png" />
+    <Content Include="Controls\images\GO_LOGO_3CSH1.jpg" />
+    <Content Include="Controls\images\GO_LOGO_3CSH1_60.png" />
+    <Content Include="Controls\images\larrymillerpowertrain.jpg" />
+    <Content Include="Controls\images\LM_LOGO.png" />
+    <Content Include="Controls\images\magnifyingglass.gif" />
+    <Content Include="Controls\images\TRACY_LOGO_4C.png" />
+    <Content Include="Controls\images\usa.jpg" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="images\C&amp;K Version.mp4" />
+    <Content Include="images\CKAnnouncement.png" />
+    <Content Include="images\CKVinAnnouncement.png" />
+    <Content Include="images\FMPSlider-01.png" />
+    <Content Include="images\FMPSlider-02.png" />
+    <Content Include="images\FMPSlider-03.png" />
+    <Content Include="images\FMPSlider-04.png" />
+    <Content Include="images\FMPSlider-05.png" />
+    <Content Include="images\ajax-loader-blue.gif" />
+    <Content Include="images\anPCpartsBackgrnd.jpg" />
+    <Content Include="images\autonation.png" />
+    <Content Include="images\AutoNationChevroletMesalogo.jpg" />
+    <Content Include="images\AutoNationPartsCentersClearwater.png" />
+    <Content Include="images\bg-logos.png" />
+    <Content Include="images\calender.png" />
+    <Content Include="images\carmaxfmp.jpg" />
+    <Content Include="images\Check-icon.png" />
+    <Content Include="images\ckfmp.png" />
+    <Content Include="images\close.png" />
+    <Content Include="images\DickMyers_banner.png" />
+    <Content Include="images\edit-delete.png" />
+    <Content Include="images\edit-icon.png" />
+    <Content Include="images\excel.png" />
+    <Content Include="images\Fitz_banner.png" />
+    <Content Include="images\ford_parts_online.gif" />
+    <Content Include="images\GaudinFord.jpg" />
+    <Content Include="images\GoPowerTrain.jpg" />
+    <Content Include="images\img_performance.jpg" />
+    <Content Include="images\img_performance.png" />
+    <Content Include="images\newfitzlogo1.jpeg" />
+    <Content Include="images\pdf.png" />
+    <Content Include="images\pp2.jpg" />
+    <Content Include="images\pp6.jpg" />
+    <Content Include="images\Print-icon.png" />
+    <Content Include="images\purple_checkmark.png" />
+    <Content Include="images\quirkparts.jpg" />
+    <Content Include="images\Remove_Icon.png" />
+    <Content Include="Controls\images\cklogo.png" />
+    <Content Include="images\bridge.png" />
+    <Content Include="images\collision.png" />
+    <Content Include="images\estore.jpg" />
+    <Content Include="images\estore.png" />
+    <Content Include="images\ford-moto.jpg" />
+    <Content Include="images\ford-moto.png" />
+    <Content Include="images\freon.png" />
+    <Content Include="images\gm.png" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="images\mopar.jpg" />
+    <Content Include="images\mopar2.png" />
+    <Content Include="images\more.png" />
+    <Content Include="images\nissan.jpg" />
+    <Content Include="images\nissan.png" />
+    <Content Include="images\oeconnection.png" />
+    <Content Include="images\oereman.png" />
+    <Content Include="images\shadow_left.png" />
+    <Content Include="images\shadow_right.png" />
+    <Content Include="images\toyo-denso.png" />
+    <Content Include="images\toyota.png" />
+    <Content Include="images\tracy.png" />
+    <Content Include="images\GO_LOGO_3CSH1.jpg" />
+    <Content Include="images\GO_LOGO_3CSH1_60.png" />
+    <Content Include="images\TRACY_LOGO_4C.png" />
+    <Content Include="CoolingWebService.asmx" />
+    <Content Include="images\unknown.png" />
+    <Content Include="images\Warning.png" />
+    <Content Include="images\word.png" />
+    <Content Include="InventoryWebService.asmx" />
+    <Content Include="logout.aspx" />
+    <Content Include="ManualTransmissionWebService.asmx" />
+    <Content Include="OrderTrackingWebService.asmx" />
+    <Content Include="OrderWebService.asmx" />
+    <Content Include="packages\csharp-cloudfiles.2.0.0.45\lib\net35\Rackspace.CloudFiles.xml" />
+    <Content Include="packages\log4net.2.0.0\lib\net10-full\log4net.xml" />
+    <Content Include="packages\log4net.2.0.0\lib\net11-full\log4net.xml" />
+    <Content Include="packages\log4net.2.0.0\lib\net20-cf\log4net.xml" />
+    <Content Include="packages\log4net.2.0.0\lib\net20-full\log4net.xml" />
+    <Content Include="packages\log4net.2.0.0\lib\net35-client\log4net.xml" />
+    <Content Include="packages\log4net.2.0.0\lib\net35-full\log4net.xml" />
+    <Content Include="packages\log4net.2.0.0\lib\net40-client\log4net.xml" />
+    <Content Include="packages\log4net.2.0.0\lib\net40-full\log4net.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\netcore45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\lib\portable-net45+wp80+win8\Newtonsoft.Json.xml" />
+    <Content Include="packages\openstack.net.1.1.3.1\lib\net40\openstacknet.xml" />
+    <Content Include="packages\SimpleRESTServices.1.1.1.0\lib\net40\SimpleRESTServices.xml" />
+    <Content Include="Pages\404\404-light.html" />
+    <Content Include="Pages\404\css\background.css" />
+    <Content Include="Pages\404\css\bootstrap-responsive.css" />
+    <Content Include="Pages\404\css\bootstrap.css" />
+    <Content Include="Pages\404\css\layout.css" />
+    <Content Include="Pages\404\images\background\pattern\dark\01.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\02.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\03.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\04.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\05.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\06.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\07.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\08.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\09.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\10.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\11.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\12.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\13.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\14.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\15.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\16.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\17.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\18.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\19.png" />
+    <Content Include="Pages\404\images\background\pattern\dark\20.png" />
+    <Content Include="Pages\404\images\background\pattern\light\01.png" />
+    <Content Include="Pages\404\images\background\pattern\light\02.png" />
+    <Content Include="Pages\404\images\background\pattern\light\03.png" />
+    <Content Include="Pages\404\images\background\pattern\light\04.png" />
+    <Content Include="Pages\404\images\background\pattern\light\05.png" />
+    <Content Include="Pages\404\images\background\pattern\light\06.png" />
+    <Content Include="Pages\404\images\background\pattern\light\07.png" />
+    <Content Include="Pages\404\images\background\pattern\light\08.png" />
+    <Content Include="Pages\404\images\background\pattern\light\09.png" />
+    <Content Include="Pages\404\images\background\pattern\light\10.png" />
+    <Content Include="Pages\404\images\background\pattern\light\11.png" />
+    <Content Include="Pages\404\images\background\pattern\light\12.png" />
+    <Content Include="Pages\404\images\background\pattern\light\13.png" />
+    <Content Include="Pages\404\images\background\pattern\light\14.png" />
+    <Content Include="Pages\404\images\background\pattern\light\15.png" />
+    <Content Include="Pages\404\images\background\pattern\light\16.png" />
+    <Content Include="Pages\404\images\background\pattern\light\17.png" />
+    <Content Include="Pages\404\images\background\pattern\light\18.png" />
+    <Content Include="Pages\404\images\background\pattern\light\19.png" />
+    <Content Include="Pages\404\images\background\pattern\light\20.png" />
+    <Content Include="Pages\404\js\cssLoader.js" />
+    <Content Include="Pages\AnotherTest.aspx" />
+    <Content Include="Pages\Arrivals.aspx" />
+    <Content Include="Pages\ChecksBalances.aspx" />
+    <Content Include="Pages\CKOrders.aspx" />
+    <Content Include="Pages\CarmaxPartsPortal.aspx" />
+    <Content Include="Pages\CKPartsPortal.aspx" />
+    <Content Include="Pages\Contacts.aspx" />
+    <Content Include="Pages\CoolingSearch.aspx" />
+    <Content Include="Pages\CustomerManage.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Pages\CustomerRec.aspx" />
+    <Content Include="Pages\CustomerRelat.aspx" />
+    <Content Include="Pages\CustomerRelatPrint.aspx" />
+    <Content Include="Pages\Dashboard.aspx" />
+    <Content Include="Pages\DifferentialIMS.aspx" />
+    <Content Include="Pages\DifferentialSearch.aspx" />
+    <Content Include="Pages\EmailQueue.aspx" />
+    <Content Include="Pages\EngineIMS.aspx" />
+    <Content Include="Pages\EngineSearch.aspx" />
+    <Content Include="EngineWebService.asmx" />
+    <Content Include="Global.asax" />
+    <Content Include="IMSWebService.asmx" />
+    <Content Include="OEMWebService.asmx" />
+    <Content Include="Pages\ErrorTest.aspx" />
+    <Content Include="Pages\ExcelExport.aspx" />
+    <Content Include="Pages\FinalizeOrder.aspx" />
+    <Content Include="Pages\FormerTracyCustomerRedirect.aspx" />
+    <Content Include="Pages\Home.aspx" />
+    <Content Include="Pages\IMS.aspx" />
+    <Content Include="Pages\IncomeExpense.aspx" />
+    <Content Include="Pages\IncompleteReturnsNoReplacement.aspx" />
+    <Content Include="Pages\IncompleteReturns.aspx" />
+    <Content Include="Pages\LaborPayCred.aspx" />
+    <Content Include="Pages\ManualTransmissionSearch.aspx" />
+    <Content Include="Pages\NewOrder.aspx" />
+    <Content Include="Pages\Order.aspx" />
+    <Content Include="Pages\Orders.aspx" />
+    <Content Include="Pages\OrderTracking.aspx" />
+    <Content Include="Pages\OutstandingRecPay.aspx" />
+    <Content Include="Pages\PartOrderMaintenance.aspx" />
+    <Content Include="Pages\PartsPortal.aspx" />
+    <Content Include="Pages\Payables.aspx" />
+    <Content Include="Pages\PaymentsMarked.aspx" />
+    <Content Include="Pages\PaymentsToFrom.aspx" />
+    <Content Include="Pages\PricingUpdates.aspx" />
+    <Content Include="Pages\PrintArrivals.aspx" />
+    <Content Include="Pages\PrintCKInvoices.aspx" />
+    <Content Include="Pages\Profile.aspx" />
+    <Content Include="Pages\QuickPricing.aspx" />
+    <Content Include="Pages\Quotes.aspx" />
+    <Content Include="Pages\Receivables.aspx" />
+    <Content Include="Pages\RemanInventory.aspx" />
+    <Content Include="Pages\SalesVolume.aspx" />
+    <Content Include="Pages\sandbox.aspx" />
+    <Content Include="Pages\Search.aspx" />
+    <Content Include="Pages\StockOrderImport.aspx" />
+    <Content Include="Pages\temp.aspx" />
+    <Content Include="Pages\test.aspx" />
+    <Content Include="Pages\TestPage.html" />
+    <Content Include="Pages\Tier.aspx" />
+    <Content Include="Pages\ToOrder.aspx" />
+    <Content Include="Pages\TotalGP.aspx" />
+    <Content Include="Pages\TotalGPWarranty.aspx" />
+    <Content Include="Pages\TransferCaseSearch.aspx" />
+    <Content Include="Pages\TransmissionSearch.aspx" />
+    <Content Include="Pages\UsedSearch.aspx" />
+    <Content Include="Pages\VendorManagementPortal.aspx" />
+    <Content Include="Pages\VendorManagementPortal1.aspx" />
+    <Content Include="Pages\VendorStatsYTD.aspx" />
+    <Content Include="Pages\ViewInvoice.aspx" />
+    <Content Include="Pages\WarrantyComparison.aspx" />
+    <Content Include="Pages\WarrantyComparisonTest.aspx" />
+    <Content Include="Pages\WarrantyLookup.aspx" />
+    <Content Include="PigeonWebService.asmx" />
+    <Content Include="PricingWebService.asmx" />
+    <Content Include="QuickPricingWebService.asmx" />
+    <Content Include="ReportsWebService.asmx" />
+    <Content Include="Scripts\accounting.js" />
+    <Content Include="Scripts\AjaxHandler.js" />
+    <Content Include="Scripts\bootstrap-datepicker.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
+    <Content Include="Scripts\bootstrap-typeahead.js" />
+    <Content Include="Scripts\bootstrapVendor.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bxSlider.js" />
+    <Content Include="Scripts\chosen.jquery.js" />
+    <Content Include="Scripts\chosen.jquery.min.js" />
+    <Content Include="Scripts\ColumnFilterWidgets.js" />
+    <Content Include="Scripts\customermanage.js" />
+    <Content Include="Scripts\dataTables.editor.js" />
+    <Content Include="Scripts\dataTables.editor.min.js" />
+    <Content Include="Scripts\en-US.js" />
+    <Content Include="Scripts\excanvas.js" />
+    <Content Include="Scripts\excanvas.min.js" />
+    <Content Include="Scripts\graphs.js" />
+    <Content Include="Scripts\fancybox\blank.gif" />
+    <Content Include="Scripts\fancybox\fancybox-x.png" />
+    <Content Include="Scripts\fancybox\fancybox-y.png" />
+    <Content Include="Scripts\fancybox\fancybox.png" />
+    <Content Include="Scripts\fancybox\fancy_close.png" />
+    <Content Include="Scripts\fancybox\fancy_loading.png" />
+    <Content Include="Scripts\fancybox\fancy_nav_left.png" />
+    <Content Include="Scripts\fancybox\fancy_nav_right.png" />
+    <Content Include="Scripts\fancybox\fancy_shadow_e.png" />
+    <Content Include="Scripts\fancybox\fancy_shadow_n.png" />
+    <Content Include="Scripts\fancybox\fancy_shadow_ne.png" />
+    <Content Include="Scripts\fancybox\fancy_shadow_nw.png" />
+    <Content Include="Scripts\fancybox\fancy_shadow_s.png" />
+    <Content Include="Scripts\fancybox\fancy_shadow_se.png" />
+    <Content Include="Scripts\fancybox\fancy_shadow_sw.png" />
+    <Content Include="Scripts\fancybox\fancy_shadow_w.png" />
+    <Content Include="Scripts\fancybox\fancy_title_left.png" />
+    <Content Include="Scripts\fancybox\fancy_title_main.png" />
+    <Content Include="Scripts\fancybox\fancy_title_over.png" />
+    <Content Include="Scripts\fancybox\fancy_title_right.png" />
+    <Content Include="Scripts\fancybox\jquery.easing-1.3.pack.js" />
+    <Content Include="Scripts\fancybox\jquery.fancybox-1.3.4.css" />
+    <Content Include="Scripts\fancybox\jquery.fancybox-1.3.4.js" />
+    <Content Include="Scripts\fancybox\jquery.fancybox-1.3.4.pack.js" />
+    <Content Include="Scripts\fancybox\jquery.mousewheel-3.0.4.pack.js" />
+    <Content Include="Scripts\ig\ig.ui.editors.min.js" />
+    <Content Include="Scripts\ig\ig.ui.grid.min.js" />
+    <Content Include="Scripts\ig\ig.ui.min.js" />
+    <Content Include="Scripts\ig\ig.ui.upload.min.js" />
+    <Content Include="Scripts\ig\ig.ui.videoplayer.min.js" />
+    <Content Include="Scripts\ims.js" />
+    <Content Include="Scripts\jquery-1.1.2.4.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.js" />
+    <Content Include="Scripts\jquery-1.7.min.js" />
+    <Content Include="Scripts\jquery-2.2.0.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.10.custom.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.16.all.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.18.custom.js" />
+    <Content Include="Scripts\jquery.collapsible.js" />
+    <Content Include="Scripts\jquery.collapsible.min.js" />
+    <Content Include="Scripts\jquery.colorhelpers.js" />
+    <Content Include="Scripts\jquery.cookie.js" />
+    <Content Include="Scripts\jquery.countdown.min.js" />
+    <Content Include="Scripts\jquery.counter-1.0.js" />
+    <Content Include="Scripts\jquery.counter-1.0.min.js" />
+    <Content Include="Scripts\jquery.cursorMessage.js" />
+    <Content Include="Scripts\jquery.dataTables.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
+    <Content Include="Scripts\jquery.dropkick-1.0.0.js" />
+    <Content Include="Scripts\jquery.easing.1.3.js" />
+    <Content Include="Scripts\jquery.fileupload-fp.js" />
+    <Content Include="Scripts\jquery.fileupload.js" />
+    <Content Include="Scripts\jquery.flot.crosshair.js" />
+    <Content Include="Scripts\jquery.flot.fillbetween.js" />
+    <Content Include="Scripts\jquery.flot.image.js" />
+    <Content Include="Scripts\jquery.flot.js" />
+    <Content Include="Scripts\jquery.flot.navigate.js" />
+    <Content Include="Scripts\jquery.flot.pie.js" />
+    <Content Include="Scripts\jquery.flot.resize.js" />
+    <Content Include="Scripts\jquery.flot.selection.js" />
+    <Content Include="Scripts\jquery.flot.stack.js" />
+    <Content Include="Scripts\jquery.flot.symbol.js" />
+    <Content Include="Scripts\jquery.flot.threshold.js" />
+    <Content Include="Scripts\jquery.iframe-transport.js" />
+    <Content Include="Scripts\jquery.iphoneui.js" />
+    <Content Include="Scripts\jquery.jeditable.min.js" />
+    <Content Include="Scripts\jquery.jpanelmenu.min.js" />
+    <Content Include="Scripts\jquery.jqDock.js" />
+    <Content Include="Scripts\jquery.jvectormap\europe-en.js" />
+    <Content Include="Scripts\jquery.jvectormap\germany-en.js" />
+    <Content Include="Scripts\jquery.jvectormap\jquery.vector-map.css" />
+    <Content Include="Scripts\jquery.jvectormap\jquery.vector-map.js" />
+    <Content Include="Scripts\jquery.jvectormap\usa-en.js" />
+    <Content Include="Scripts\jquery.jvectormap\world-en.js" />
+    <Content Include="Scripts\jquery.lionbars.0.3.js" />
+    <Content Include="Scripts\jquery.loader.js" />
+    <Content Include="Scripts\jquery.loadmask.js" />
+    <Content Include="Scripts\jquery.loadmask.min.js" />
+    <Content Include="Scripts\jquery.maskedinput-1.3.min.js" />
+    <Content Include="Scripts\jquery.maskedinput.js" />
+    <Content Include="Scripts\jquery.metadata.js" />
+    <Content Include="Scripts\jquery.odoticker.js" />
+    <Content Include="Scripts\jquery.parseQuery.js" />
+    <Content Include="Scripts\jquery.scrollfollow.js" />
+    <Content Include="Scripts\jquery.tmpl.min.js" />
+    <Content Include="Scripts\jquery.ui.widget.js" />
+    <Content Include="Scripts\jquery.uniform.js" />
+    <Content Include="Scripts\jquery.validate-1.0.js" />
+    <Content Include="Scripts\jquey.loader.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\jstorage.js" />
+    <Content Include="Scripts\knockout.validation.js" />
+    <Content Include="Scripts\knockout_3_2_0.js" />
+    <Content Include="Scripts\less-1.1.3.min.js" />
+    <Content Include="Scripts\mbContainer.js" />
+    <Content Include="Scripts\modules\checkout-form-2.2.js" />
+    <Content Include="Scripts\modules\pigeon-pricing.js" />
+    <Content Include="Scripts\modules\templates\cart-template.htm" />
+    <Content Include="Scripts\modules\templates\checkout-template.htm" />
+    <Content Include="Scripts\modules\templates\customer-search-template.htm" />
+    <Content Include="Scripts\modules\templates\customers-template.htm" />
+    <Content Include="Scripts\modules\tools.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\noty\jquery.noty.js" />
+    <Content Include="Scripts\noty\layouts\bottom.js" />
+    <Content Include="Scripts\noty\layouts\bottomCenter.js" />
+    <Content Include="Scripts\noty\layouts\bottomLeft.js" />
+    <Content Include="Scripts\noty\layouts\bottomRight.js" />
+    <Content Include="Scripts\noty\layouts\center.js" />
+    <Content Include="Scripts\noty\layouts\centerLeft.js" />
+    <Content Include="Scripts\noty\layouts\centerRight.js" />
+    <Content Include="Scripts\noty\layouts\topRightOrder.js" />
+    <Content Include="Scripts\noty\layouts\inline.js" />
+    <Content Include="Scripts\noty\layouts\top.js" />
+    <Content Include="Scripts\noty\layouts\topCenter.js" />
+    <Content Include="Scripts\noty\layouts\topLeft.js" />
+    <Content Include="Scripts\noty\layouts\topRight.js" />
+    <Content Include="Scripts\noty\promise.js" />
+    <Content Include="Scripts\noty\themes\default.js" />
+    <Content Include="Scripts\order.js" />
+    <Content Include="Scripts\partsportal-1.2.js" />
+    <Content Include="Scripts\partsportalB-1.1-.js" />
+    <Content Include="Scripts\Quotes-v1.6-.js" />
+    <Content Include="Scripts\rms.js" />
+    <Content Include="Scripts\scroll\jquery.hoverscroll.css" />
+    <Content Include="Scripts\scroll\jquery.hoverscroll.js" />
+    <Content Include="Scripts\spin.js" />
+    <Content Include="Scripts\spinner.js" />
+    <Content Include="Scripts\sweetalert2.min.js" />
+    <Content Include="Scripts\ticker.js" />
+    <Content Include="Scripts\ui.expandable.js" />
+    <Content Include="Scripts\ui.expandable.min.js" />
+    <Content Include="Pages\Web.config" />
+    <Content Include="Account\Web.config" />
+    <Content Include="Account\App_Browsers\safari.browser" />
+    <Content Include="Docs\Mopar 4Q 2012 PT Wholesale Rebate.pdf" />
+    <Content Include="Docs\Guadin36UnlimitedWarranty.pdf" />
+    <Content Include="dsPrintInvoice.xsc">
+      <DependentUpon>dsPrintInvoice.xsd</DependentUpon>
+    </Content>
+    <Content Include="Docs\AutoNation36MonthWarranty.pdf" />
+    <Content Include="Docs\AutoNation36UnlimitedWarranty.pdf" />
+    <Content Include="Docs\Big Valley 36 Unlimited Warranty.pdf" />
+    <Content Include="Docs\C&amp;K 36 Month Warranty.pdf" />
+    <Content Include="Docs\C&amp;K 36 Unlimited Warranty.pdf" />
+    <Content Include="Docs\C&amp;KAutoPartsTutorial.pdf" />
+    <Content Include="Docs\Dick Myers 36 Month Warranty.pdf" />
+    <Content Include="Docs\Dick Myers 36 Unlimited Warranty.pdf" />
+    <Content Include="Docs\Tracy Mopar 3Q 2012 PT Wholesale Rebate.pdf" />
+    <Content Include="Docs\Fitz 12 Month Warranty.pdf" />
+    <Content Include="Docs\Mesa36MonthWarranty.pdf" />
+    <Content Include="Docs\Mesa36UnlimitedWarranty.pdf" />
+    <Content Include="Docs\AutoNationPartsCenterClearwater36MonthWarranty.pdf" />
+    <Content Include="Docs\AutoNationPartsCenterClearwater36UnlimitedWarranty.pdf" />
+    <Content Include="Docs\AutoNationPartsCenterDenver36MonthWarranty.pdf" />
+    <Content Include="Docs\AutoNationPartsCenterDenver36UnlimitedWarranty.pdf" />
+    <Content Include="bin\Pigeon.dll.config" />
+    <Content Include="bin\RateWebServiceClient.vshost.exe.manifest" />
+    <Content Include="bin\DeleteShipmentWebServiceClient.exe.config" />
+    <Content Include="bin\DeleteShipmentWebServiceClient.vshost.exe.config" />
+    <Content Include="bin\CreatePickupWebServiceClient.vshost.exe.manifest" />
+    <None Include="dsPrintInvoice.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPrintInvoice.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="dsPrintInvoice.xss">
+      <DependentUpon>dsPrintInvoice.xsd</DependentUpon>
+    </Content>
+    <Content Include="dsPrintInvoiceBatch.xsc">
+      <DependentUpon>dsPrintInvoiceBatch.xsd</DependentUpon>
+    </Content>
+    <None Include="dsPrintInvoiceBatch.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPrintInvoiceBatch.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="dsPrintInvoiceBatch.xss">
+      <DependentUpon>dsPrintInvoiceBatch.xsd</DependentUpon>
+    </Content>
+    <Content Include="DocumentHandler.ashx" />
+    <Content Include="Log4Net.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="My Project\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Docs\DuPratt36MonthWarranty.pdf" />
+    <None Include="Docs\Dupratt36UnlimitedWarranty.pdf" />
+    <None Include="Docs\Fitz 36 month warranty.pdf" />
+    <None Include="Docs\Fitz 36 Unlimited Warranty.pdf" />
+    <None Include="Docs\AutoNation_0512_MT_full page.pdf" />
+    <None Include="Docs\CollisionPartsAdvantage_Flyer.pdf" />
+    <None Include="Docs\Go-Reman-Flyer2.pdf" />
+    <None Include="Docs\Rebate_Form_Preview.pdf" />
+    <None Include="Docs\LarryMiller36 Month Warranty.pdf" />
+    <None Include="Docs\LarryMiller36 Unlimited Warranty.pdf" />
+    <None Include="Docs\Quirk36MonthWarranty.pdf" />
+    <None Include="Docs\Quirk36UnlimitedWarranty.pdf" />
+    <None Include="Docs\Tracy36 Month Warranty.pdf" />
+    <None Include="Docs\Tracy36 Unlimited Warranty.pdf" />
+    <Content Include="Pages\Pigeon.Master" />
+    <Content Include="packages\csharp-cloudfiles.2.0.0.45\content\Log4Net.config" />
+    <Content Include="packages\csharp-cloudfiles.2.0.0.45\csharp-cloudfiles.2.0.0.45.nupkg" />
+    <Content Include="packages\log4net.2.0.0\log4net.2.0.0.nupkg" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\Newtonsoft.Json.5.0.6.nupkg" />
+    <Content Include="packages\Newtonsoft.Json.5.0.6\Newtonsoft.Json.5.0.6.nuspec" />
+    <Content Include="packages\openstack.net.1.1.3.1\openstack.net.1.1.3.1.nupkg" />
+    <Content Include="packages\openstack.net.1.1.3.1\openstack.net.1.1.3.1.nuspec" />
+    <Content Include="packages\repositories.config" />
+    <Content Include="packages\SimpleRESTServices.1.1.1.0\SimpleRESTServices.1.1.1.0.nupkg" />
+    <Content Include="packages\SimpleRESTServices.1.1.1.0\SimpleRESTServices.1.1.1.0.nuspec" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Pages\PigeonCarmax.Master" />
+    <Content Include="Scripts\underscore.min.js" />
+    <Content Include="Scripts\VendorPortalV1.js" />
+    <Content Include="Scripts\wl_Store.js" />
+    <Content Include="Scripts\wl_Widget.js" />
+    <Content Include="Styles\1140.css" />
+    <Content Include="Styles\admin.css" />
+    <Content Include="Styles\blank_theme.css" />
+    <Content Include="Styles\bootstrap-3.3.7\bootstrap-3.3.7.min.css" />
+    <Content Include="Styles\bootstrap-datetimepicker.min.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\bootstrapVendor.css" />
+    <Content Include="Styles\chosen.css" />
+    <Content Include="Styles\CkOrderHistory.css" />
+    <Content Include="Styles\ckpartsportal.css" />
+    <Content Include="Styles\collapse.css" />
+    <Content Include="Styles\common.css" />
+    <Content Include="Styles\Copy of engines.css" />
+    <Content Include="Styles\customer.css" />
+    <Content Include="Styles\customermanage.css" />
+    <Content Include="Styles\datatable\ColumnFilterWidgets.css" />
+    <Content Include="Styles\datatable\dataTables.editor.css" />
+    <Content Include="Styles\datatable\table.css" />
+    <Content Include="Styles\datatable\table2.css" />
+    <Content Include="Styles\datepicker.css" />
+    <Content Include="Styles\dealerCentral.css" />
+    <Content Include="Styles\demo_table_jui.css" />
+    <Content Include="Styles\dropkick.css" />
+    <Content Include="Styles\engine.css" />
+    <Content Include="Styles\engines.css" />
+    <Content Include="Styles\FinalizeOrder.css" />
+    <Content Include="Styles\forms.css" />
+    <Content Include="Styles\ie.css" />
+    <Content Include="Styles\ig\ig.ui.editors-min.css" />
+    <Content Include="Styles\ig\ig.ui.editors.css" />
+    <Content Include="Styles\ig\ig.ui.fileupload-min.css" />
+    <Content Include="Styles\ig\ig.ui.fileupload.css" />
+    <Content Include="Styles\ig\ig.ui.grid-min.css" />
+    <Content Include="Styles\ig\ig.ui.grid.css" />
+    <Content Include="Styles\ig\ig.ui.grid_VD-min.css" />
+    <Content Include="Styles\ig\ig.ui.grid_VD.css" />
+    <Content Include="Styles\ig\ig.ui.rating-min.css" />
+    <Content Include="Styles\ig\ig.ui.rating.css" />
+    <Content Include="Styles\ig\ig.ui.shared-min.css" />
+    <Content Include="Styles\ig\ig.ui.shared.css" />
+    <Content Include="Styles\ig\ig.ui.validator-min.css" />
+    <Content Include="Styles\ig\ig.ui.validator.css" />
+    <Content Include="Styles\ig\ig.ui.videoplayer-min.css" />
+    <Content Include="Styles\ig\ig.ui.videoplayer.css" />
+    <Content Include="Styles\ig\images\buttonSprite.png" />
+    <Content Include="Styles\ig\images\button_bg.png" />
+    <Content Include="Styles\ig\images\curvedShadowSprite.jpg" />
+    <Content Include="Styles\ig\images\dataGridHeader.png" />
+    <Content Include="Styles\ig\images\datepicker.gif" />
+    <Content Include="Styles\ig\images\expand.gif" />
+    <Content Include="Styles\ig\images\icon_sprite.png" />
+    <Content Include="Styles\ig\images\ig-rating-red.png" />
+    <Content Include="Styles\ig\images\ig.ui.grid_VD-min.css" />
+    <Content Include="Styles\ig\images\igBigPauseButton.png" />
+    <Content Include="Styles\ig\images\igBigPlayButton.png" />
+    <Content Include="Styles\ig\images\igg_BottomDragIndicator.png" />
+    <Content Include="Styles\ig\images\igg_Filter.gif" />
+    <Content Include="Styles\ig\images\igg_FilterApplied.gif" />
+    <Content Include="Styles\ig\images\igg_Fix.gif" />
+    <Content Include="Styles\ig\images\igg_FixHover.gif" />
+    <Content Include="Styles\ig\images\igg_header.gif" />
+    <Content Include="Styles\ig\images\igg_sortAsc.gif" />
+    <Content Include="Styles\ig\images\igg_sortDesc.gif" />
+    <Content Include="Styles\ig\images\igg_Sprite.png" />
+    <Content Include="Styles\ig\images\igg_Sum.gif" />
+    <Content Include="Styles\ig\images\igg_SumHover.gif" />
+    <Content Include="Styles\ig\images\igg_SumPressed.gif" />
+    <Content Include="Styles\ig\images\igg_TopDragIndicator.png" />
+    <Content Include="Styles\ig\images\igg_Unfix.gif" />
+    <Content Include="Styles\ig\images\igg_UnfixHover.gif" />
+    <Content Include="Styles\ig\images\igg_UnfixPressed.gif" />
+    <Content Include="Styles\ig\images\igLoadingSmall.gif" />
+    <Content Include="Styles\ig\images\progress_bar.gif" />
+    <Content Include="Styles\ig\images\slider_handles.png" />
+    <Content Include="Styles\ig\images\slider_h_bg.gif" />
+    <Content Include="Styles\ig\images\slider_v_bg.gif" />
+    <Content Include="Styles\ig\images\tab_bg.gif" />
+    <Content Include="Styles\ig\images\the_gradient.gif" />
+    <Content Include="Styles\ig\images\ui-anim_basic_16x16.gif" />
+    <Content Include="Styles\ig\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Styles\ig\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Styles\ig\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Styles\ig\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Styles\ig\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Styles\ig\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Styles\ig\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Styles\ig\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Styles\ig\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Styles\ig\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Styles\ig\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Styles\ig\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Styles\ig\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Styles\ig\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Styles\ig\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Styles\ig\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Styles\ig\images\ui-icons_222222_256x240.png" />
+    <Content Include="Styles\ig\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Styles\ig\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Styles\ig\images\ui-icons_454545_256x240.png" />
+    <Content Include="Styles\ig\images\ui-icons_888888_256x240.png" />
+    <Content Include="Styles\ig\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Styles\ig\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Styles\ig\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Styles\ig\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\ig\images\ui-igrating.png" />
+    <Content Include="Styles\ig\jquery.ui.all.css" />
+    <Content Include="Styles\ig\jquery.ui.base.css" />
+    <Content Include="Styles\ig\jquery.ui.core.css" />
+    <Content Include="Styles\ig\jquery.ui.css" />
+    <Content Include="Styles\ig\jquery.ui.custom.css" />
+    <Content Include="Styles\ig\jquery.ui.datepicker.css" />
+    <Content Include="Styles\ig\jquery.ui.slider.css" />
+    <Content Include="Styles\ig\jquery.ui.theme.css" />
+    <Content Include="Styles\ig\Site.css" />
+    <Content Include="Styles\images\ajax-loader.gif" />
+    <Content Include="Styles\images\calender.png" />
+    <Content Include="Styles\images\chosen-sprite.png" />
+    <Content Include="Styles\images\close.png" />
+    <Content Include="Styles\images\dk_arrows.png" />
+    <Content Include="Styles\images\dk_arrows_white.png" />
+    <Content Include="Styles\images\icons\dark\abacus.png" />
+    <Content Include="Styles\images\icons\dark\access_denied.png" />
+    <Content Include="Styles\images\icons\dark\address_book.png" />
+    <Content Include="Styles\images\icons\dark\admin_user.png" />
+    <Content Include="Styles\images\icons\dark\admin_user_2.png" />
+    <Content Include="Styles\images\icons\dark\airplane.png" />
+    <Content Include="Styles\images\icons\dark\alarm.png" />
+    <Content Include="Styles\images\icons\dark\alarm_2.png" />
+    <Content Include="Styles\images\icons\dark\alarm_clock.png" />
+    <Content Include="Styles\images\icons\dark\alert.png" />
+    <Content Include="Styles\images\icons\dark\android.png" />
+    <Content Include="Styles\images\icons\dark\application.png" />
+    <Content Include="Styles\images\icons\dark\archive.png" />
+    <Content Include="Styles\images\icons\dark\arrow_down.png" />
+    <Content Include="Styles\images\icons\dark\arrow_down_left.png" />
+    <Content Include="Styles\images\icons\dark\arrow_down_right.png" />
+    <Content Include="Styles\images\icons\dark\arrow_left.png" />
+    <Content Include="Styles\images\icons\dark\arrow_right.png" />
+    <Content Include="Styles\images\icons\dark\arrow_up.png" />
+    <Content Include="Styles\images\icons\dark\arrow_up_left.png" />
+    <Content Include="Styles\images\icons\dark\arrow_up_right.png" />
+    <Content Include="Styles\images\icons\dark\bag.png" />
+    <Content Include="Styles\images\icons\dark\balloons.png" />
+    <Content Include="Styles\images\icons\dark\bandaid.png" />
+    <Content Include="Styles\images\icons\dark\battery.png" />
+    <Content Include="Styles\images\icons\dark\battery_33.png" />
+    <Content Include="Styles\images\icons\dark\battery_66.png" />
+    <Content Include="Styles\images\icons\dark\battery_empty.png" />
+    <Content Include="Styles\images\icons\dark\battery_full.png" />
+    <Content Include="Styles\images\icons\dark\bended_arrow_down.png" />
+    <Content Include="Styles\images\icons\dark\bended_arrow_left.png" />
+    <Content Include="Styles\images\icons\dark\bended_arrow_right.png" />
+    <Content Include="Styles\images\icons\dark\bended_arrow_up.png" />
+    <Content Include="Styles\images\icons\dark\big_brush.png" />
+    <Content Include="Styles\images\icons\dark\blackberry.png" />
+    <Content Include="Styles\images\icons\dark\blocks_images.png" />
+    <Content Include="Styles\images\icons\dark\blu-ray.png" />
+    <Content Include="Styles\images\icons\dark\bluetooth.png" />
+    <Content Include="Styles\images\icons\dark\bluetooth_2.png" />
+    <Content Include="Styles\images\icons\dark\book.png" />
+    <Content Include="Styles\images\icons\dark\books.png" />
+    <Content Include="Styles\images\icons\dark\book_large.png" />
+    <Content Include="Styles\images\icons\dark\breadcrumb.png" />
+    <Content Include="Styles\images\icons\dark\brush.png" />
+    <Content Include="Styles\images\icons\dark\buildings.png" />
+    <Content Include="Styles\images\icons\dark\bulls_eye.png" />
+    <Content Include="Styles\images\icons\dark\calculator.png" />
+    <Content Include="Styles\images\icons\dark\calendar.png" />
+    <Content Include="Styles\images\icons\dark\calendar_day.png" />
+    <Content Include="Styles\images\icons\dark\camera.png" />
+    <Content Include="Styles\images\icons\dark\camera_2.png" />
+    <Content Include="Styles\images\icons\dark\car.png" />
+    <Content Include="Styles\images\icons\dark\cash_register.png" />
+    <Content Include="Styles\images\icons\dark\cassette.png" />
+    <Content Include="Styles\images\icons\dark\cat.png" />
+    <Content Include="Styles\images\icons\dark\cd.png" />
+    <Content Include="Styles\images\icons\dark\chair.png" />
+    <Content Include="Styles\images\icons\dark\chart.png" />
+    <Content Include="Styles\images\icons\dark\chart_2.png" />
+    <Content Include="Styles\images\icons\dark\chart_3.png" />
+    <Content Include="Styles\images\icons\dark\chart_4.png" />
+    <Content Include="Styles\images\icons\dark\chart_5.png" />
+    <Content Include="Styles\images\icons\dark\chart_6.png" />
+    <Content Include="Styles\images\icons\dark\chart_7.png" />
+    <Content Include="Styles\images\icons\dark\chart_8.png" />
+    <Content Include="Styles\images\icons\dark\chemical.png" />
+    <Content Include="Styles\images\icons\dark\chrome.png" />
+    <Content Include="Styles\images\icons\dark\clipboard.png" />
+    <Content Include="Styles\images\icons\dark\clock.png" />
+    <Content Include="Styles\images\icons\dark\cloud.png" />
+    <Content Include="Styles\images\icons\dark\cloud_download.png" />
+    <Content Include="Styles\images\icons\dark\cloud_upload.png" />
+    <Content Include="Styles\images\icons\dark\cog.png" />
+    <Content Include="Styles\images\icons\dark\cog_2.png" />
+    <Content Include="Styles\images\icons\dark\cog_3.png" />
+    <Content Include="Styles\images\icons\dark\cog_4.png" />
+    <Content Include="Styles\images\icons\dark\collapse.png" />
+    <Content Include="Styles\images\icons\dark\companies.png" />
+    <Content Include="Styles\images\icons\dark\compress.png" />
+    <Content Include="Styles\images\icons\dark\copy.png" />
+    <Content Include="Styles\images\icons\dark\coverflow.png" />
+    <Content Include="Styles\images\icons\dark\create_write.png" />
+    <Content Include="Styles\images\icons\dark\cross.png" />
+    <Content Include="Styles\images\icons\dark\cup.png" />
+    <Content Include="Styles\images\icons\dark\cursor.png" />
+    <Content Include="Styles\images\icons\dark\delicious.png" />
+    <Content Include="Styles\images\icons\dark\desk.png" />
+    <Content Include="Styles\images\icons\dark\digg.png" />
+    <Content Include="Styles\images\icons\dark\digg_2.png" />
+    <Content Include="Styles\images\icons\dark\document.png" />
+    <Content Include="Styles\images\icons\dark\documents.png" />
+    <Content Include="Styles\images\icons\dark\document_add.png" />
+    <Content Include="Styles\images\icons\dark\document_delete.png" />
+    <Content Include="Styles\images\icons\dark\download.png" />
+    <Content Include="Styles\images\icons\dark\download_to_computer.png" />
+    <Content Include="Styles\images\icons\dark\dress.png" />
+    <Content Include="Styles\images\icons\dark\dribbble.png" />
+    <Content Include="Styles\images\icons\dark\dribbble_2.png" />
+    <Content Include="Styles\images\icons\dark\dropbox.png" />
+    <Content Include="Styles\images\icons\dark\drupal.png" />
+    <Content Include="Styles\images\icons\dark\duplicate.png" />
+    <Content Include="Styles\images\icons\dark\dvd.png" />
+    <Content Include="Styles\images\icons\dark\eject.png" />
+    <Content Include="Styles\images\icons\dark\electricty_input.png" />
+    <Content Include="Styles\images\icons\dark\electricty_plug.png" />
+    <Content Include="Styles\images\icons\dark\empty.png" />
+    <Content Include="Styles\images\icons\dark\excel_document.png" />
+    <Content Include="Styles\images\icons\dark\excel_documents.png" />
+    <Content Include="Styles\images\icons\dark\exclamation.png" />
+    <Content Include="Styles\images\icons\dark\exit.png" />
+    <Content Include="Styles\images\icons\dark\expand.png" />
+    <Content Include="Styles\images\icons\dark\expose.png" />
+    <Content Include="Styles\images\icons\dark\expression_engine.png" />
+    <Content Include="Styles\images\icons\dark\eyedropper.png" />
+    <Content Include="Styles\images\icons\dark\facebook.png" />
+    <Content Include="Styles\images\icons\dark\facebook_like.png" />
+    <Content Include="Styles\images\icons\dark\fax.png" />
+    <Content Include="Styles\images\icons\dark\female.png" />
+    <Content Include="Styles\images\icons\dark\female_contour.png" />
+    <Content Include="Styles\images\icons\dark\file_cabinet.png" />
+    <Content Include="Styles\images\icons\dark\film.png" />
+    <Content Include="Styles\images\icons\dark\filmcamera.png" />
+    <Content Include="Styles\images\icons\dark\film_2.png" />
+    <Content Include="Styles\images\icons\dark\finish_flag.png" />
+    <Content Include="Styles\images\icons\dark\firefox.png" />
+    <Content Include="Styles\images\icons\dark\flag.png" />
+    <Content Include="Styles\images\icons\dark\flag_2.png" />
+    <Content Include="Styles\images\icons\dark\folder.png" />
+    <Content Include="Styles\images\icons\dark\folder_add.png" />
+    <Content Include="Styles\images\icons\dark\folder_closed.png" />
+    <Content Include="Styles\images\icons\dark\folder_delete.png" />
+    <Content Include="Styles\images\icons\dark\folder_download.png" />
+    <Content Include="Styles\images\icons\dark\folder_lock.png" />
+    <Content Include="Styles\images\icons\dark\folder_love.png" />
+    <Content Include="Styles\images\icons\dark\folder_upload.png" />
+    <Content Include="Styles\images\icons\dark\footprint.png" />
+    <Content Include="Styles\images\icons\dark\forward.png" />
+    <Content Include="Styles\images\icons\dark\fountain_pen.png" />
+    <Content Include="Styles\images\icons\dark\frames.png" />
+    <Content Include="Styles\images\icons\dark\fullscreen.png" />
+    <Content Include="Styles\images\icons\dark\globe.png" />
+    <Content Include="Styles\images\icons\dark\globe_2.png" />
+    <Content Include="Styles\images\icons\dark\google_buzz.png" />
+    <Content Include="Styles\images\icons\dark\google_maps.png" />
+    <Content Include="Styles\images\icons\dark\graph.png" />
+    <Content Include="Styles\images\icons\dark\grid.png" />
+    <Content Include="Styles\images\icons\dark\hd.png" />
+    <Content Include="Styles\images\icons\dark\hd_2.png" />
+    <Content Include="Styles\images\icons\dark\hd_3.png" />
+    <Content Include="Styles\images\icons\dark\headphones.png" />
+    <Content Include="Styles\images\icons\dark\help.png" />
+    <Content Include="Styles\images\icons\dark\house.png" />
+    <Content Include="Styles\images\icons\dark\house_2.png" />
+    <Content Include="Styles\images\icons\dark\ice_cream.png" />
+    <Content Include="Styles\images\icons\dark\ice_cream_2.png" />
+    <Content Include="Styles\images\icons\dark\ichat.png" />
+    <Content Include="Styles\images\icons\dark\imac.png" />
+    <Content Include="Styles\images\icons\dark\image.png" />
+    <Content Include="Styles\images\icons\dark\images.png" />
+    <Content Include="Styles\images\icons\dark\images_2.png" />
+    <Content Include="Styles\images\icons\dark\image_2.png" />
+    <Content Include="Styles\images\icons\dark\inbox.png" />
+    <Content Include="Styles\images\icons\dark\incomming.png" />
+    <Content Include="Styles\images\icons\dark\information.png" />
+    <Content Include="Styles\images\icons\dark\ipad.png" />
+    <Content Include="Styles\images\icons\dark\iphone_3g.png" />
+    <Content Include="Styles\images\icons\dark\iphone_4.png" />
+    <Content Include="Styles\images\icons\dark\ipod.png" />
+    <Content Include="Styles\images\icons\dark\ipod_nano.png" />
+    <Content Include="Styles\images\icons\dark\joomla.png" />
+    <Content Include="Styles\images\icons\dark\key.png" />
+    <Content Include="Styles\images\icons\dark\key_2.png" />
+    <Content Include="Styles\images\icons\dark\ladys_purse.png" />
+    <Content Include="Styles\images\icons\dark\lamp.png" />
+    <Content Include="Styles\images\icons\dark\laptop.png" />
+    <Content Include="Styles\images\icons\dark\lastfm.png" />
+    <Content Include="Styles\images\icons\dark\lemonade_stand.png" />
+    <Content Include="Styles\images\icons\dark\light_bulb.png" />
+    <Content Include="Styles\images\icons\dark\link.png" />
+    <Content Include="Styles\images\icons\dark\link_2.png" />
+    <Content Include="Styles\images\icons\dark\linux.png" />
+    <Content Include="Styles\images\icons\dark\list.png" />
+    <Content Include="Styles\images\icons\dark\list_image.png" />
+    <Content Include="Styles\images\icons\dark\list_images.png" />
+    <Content Include="Styles\images\icons\dark\loading_bar.png" />
+    <Content Include="Styles\images\icons\dark\locked.png" />
+    <Content Include="Styles\images\icons\dark\locked_2.png" />
+    <Content Include="Styles\images\icons\dark\macos.png" />
+    <Content Include="Styles\images\icons\dark\magic_mouse.png" />
+    <Content Include="Styles\images\icons\dark\magnifying_glass.png" />
+    <Content Include="Styles\images\icons\dark\mail.png" />
+    <Content Include="Styles\images\icons\dark\male.png" />
+    <Content Include="Styles\images\icons\dark\male_contour.png" />
+    <Content Include="Styles\images\icons\dark\map.png" />
+    <Content Include="Styles\images\icons\dark\marker.png" />
+    <Content Include="Styles\images\icons\dark\maximize.png" />
+    <Content Include="Styles\images\icons\dark\medical_case.png" />
+    <Content Include="Styles\images\icons\dark\megaphone.png" />
+    <Content Include="Styles\images\icons\dark\microphone.png" />
+    <Content Include="Styles\images\icons\dark\mighty_mouse.png" />
+    <Content Include="Styles\images\icons\dark\minimize.png" />
+    <Content Include="Styles\images\icons\dark\minus.png" />
+    <Content Include="Styles\images\icons\dark\mobile_phone.png" />
+    <Content Include="Styles\images\icons\dark\mobypicture.png" />
+    <Content Include="Styles\images\icons\dark\money.png" />
+    <Content Include="Styles\images\icons\dark\money_2.png" />
+    <Content Include="Styles\images\icons\dark\monitor.png" />
+    <Content Include="Styles\images\icons\dark\mouse.png" />
+    <Content Include="Styles\images\icons\dark\myspace.png" />
+    <Content Include="Styles\images\icons\dark\next.png" />
+    <Content Include="Styles\images\icons\dark\note_book.png" />
+    <Content Include="Styles\images\icons\dark\outgoing.png" />
+    <Content Include="Styles\images\icons\dark\pacman.png" />
+    <Content Include="Styles\images\icons\dark\pacman_ghost.png" />
+    <Content Include="Styles\images\icons\dark\paint_brush.png" />
+    <Content Include="Styles\images\icons\dark\pants.png" />
+    <Content Include="Styles\images\icons\dark\paperclip.png" />
+    <Content Include="Styles\images\icons\dark\paste.png" />
+    <Content Include="Styles\images\icons\dark\pause.png" />
+    <Content Include="Styles\images\icons\dark\paypal.png" />
+    <Content Include="Styles\images\icons\dark\paypal_2.png" />
+    <Content Include="Styles\images\icons\dark\paypal_3.png" />
+    <Content Include="Styles\images\icons\dark\pdf_document.png" />
+    <Content Include="Styles\images\icons\dark\pdf_documents.png" />
+    <Content Include="Styles\images\icons\dark\pencil.png" />
+    <Content Include="Styles\images\icons\dark\phone.png" />
+    <Content Include="Styles\images\icons\dark\phone_2.png" />
+    <Content Include="Styles\images\icons\dark\phone_hook.png" />
+    <Content Include="Styles\images\icons\dark\piggy_bank.png" />
+    <Content Include="Styles\images\icons\dark\plane_suitecase.png" />
+    <Content Include="Styles\images\icons\dark\play.png" />
+    <Content Include="Styles\images\icons\dark\plixi.png" />
+    <Content Include="Styles\images\icons\dark\plus.png" />
+    <Content Include="Styles\images\icons\dark\post_card.png" />
+    <Content Include="Styles\images\icons\dark\power.png" />
+    <Content Include="Styles\images\icons\dark\powerpoint_document.png" />
+    <Content Include="Styles\images\icons\dark\powerpoint_documents.png" />
+    <Content Include="Styles\images\icons\dark\presentation.png" />
+    <Content Include="Styles\images\icons\dark\prev.png" />
+    <Content Include="Styles\images\icons\dark\preview.png" />
+    <Content Include="Styles\images\icons\dark\price_tag.png" />
+    <Content Include="Styles\images\icons\dark\price_tags.png" />
+    <Content Include="Styles\images\icons\dark\printer.png" />
+    <Content Include="Styles\images\icons\dark\question.png" />
+    <Content Include="Styles\images\icons\dark\radio.png" />
+    <Content Include="Styles\images\icons\dark\record.png" />
+    <Content Include="Styles\images\icons\dark\recycle.png" />
+    <Content Include="Styles\images\icons\dark\refresh.png" />
+    <Content Include="Styles\images\icons\dark\refresh_2.png" />
+    <Content Include="Styles\images\icons\dark\refresh_3.png" />
+    <Content Include="Styles\images\icons\dark\refresh_4.png" />
+    <Content Include="Styles\images\icons\dark\repeat.png" />
+    <Content Include="Styles\images\icons\dark\rewind.png" />
+    <Content Include="Styles\images\icons\dark\robot.png" />
+    <Content Include="Styles\images\icons\dark\rss.png" />
+    <Content Include="Styles\images\icons\dark\ruler.png" />
+    <Content Include="Styles\images\icons\dark\ruler_2.png" />
+    <Content Include="Styles\images\icons\dark\running_man.png" />
+    <Content Include="Styles\images\icons\dark\safari.png" />
+    <Content Include="Styles\images\icons\dark\scan_label.png" />
+    <Content Include="Styles\images\icons\dark\scissors.png" />
+    <Content Include="Styles\images\icons\dark\sd.png" />
+    <Content Include="Styles\images\icons\dark\sd_2.png" />
+    <Content Include="Styles\images\icons\dark\sd_3.png" />
+    <Content Include="Styles\images\icons\dark\settings.png" />
+    <Content Include="Styles\images\icons\dark\settings_2.png" />
+    <Content Include="Styles\images\icons\dark\shopping_bag.png" />
+    <Content Include="Styles\images\icons\dark\shopping_basket.png" />
+    <Content Include="Styles\images\icons\dark\shopping_basket_2.png" />
+    <Content Include="Styles\images\icons\dark\shopping_cart.png" />
+    <Content Include="Styles\images\icons\dark\shopping_cart_2.png" />
+    <Content Include="Styles\images\icons\dark\shopping_cart_3.png" />
+    <Content Include="Styles\images\icons\dark\shopping_cart_4.png" />
+    <Content Include="Styles\images\icons\dark\shuffle.png" />
+    <Content Include="Styles\images\icons\dark\sign_post.png" />
+    <Content Include="Styles\images\icons\dark\skype.png" />
+    <Content Include="Styles\images\icons\dark\sleeveless_shirt.png" />
+    <Content Include="Styles\images\icons\dark\socks.png" />
+    <Content Include="Styles\images\icons\dark\sound.png" />
+    <Content Include="Styles\images\icons\dark\speech_bubble.png" />
+    <Content Include="Styles\images\icons\dark\speech_bubbles.png" />
+    <Content Include="Styles\images\icons\dark\speech_bubbles_2.png" />
+    <Content Include="Styles\images\icons\dark\speech_bubble_2.png" />
+    <Content Include="Styles\images\icons\dark\sport_shirt.png" />
+    <Content Include="Styles\images\icons\dark\stop.png" />
+    <Content Include="Styles\images\icons\dark\stop_watch.png" />
+    <Content Include="Styles\images\icons\dark\strategy.png" />
+    <Content Include="Styles\images\icons\dark\strategy_2.png" />
+    <Content Include="Styles\images\icons\dark\stubleupon.png" />
+    <Content Include="Styles\images\icons\dark\suitecase.png" />
+    <Content Include="Styles\images\icons\dark\sweater.png" />
+    <Content Include="Styles\images\icons\dark\t-shirt.png" />
+    <Content Include="Styles\images\icons\dark\table.png" />
+    <Content Include="Styles\images\icons\dark\tag.png" />
+    <Content Include="Styles\images\icons\dark\tags.png" />
+    <Content Include="Styles\images\icons\dark\television.png" />
+    <Content Include="Styles\images\icons\dark\tick.png" />
+    <Content Include="Styles\images\icons\dark\timer.png" />
+    <Content Include="Styles\images\icons\dark\trashcan.png" />
+    <Content Include="Styles\images\icons\dark\trashcan_2.png" />
+    <Content Include="Styles\images\icons\dark\travel_suitecase.png" />
+    <Content Include="Styles\images\icons\dark\tree.png" />
+    <Content Include="Styles\images\icons\dark\triangle_double_down.png" />
+    <Content Include="Styles\images\icons\dark\triangle_double_left.png" />
+    <Content Include="Styles\images\icons\dark\triangle_double_right.png" />
+    <Content Include="Styles\images\icons\dark\triangle_double_up.png" />
+    <Content Include="Styles\images\icons\dark\triangle_down.png" />
+    <Content Include="Styles\images\icons\dark\triangle_down_left.png" />
+    <Content Include="Styles\images\icons\dark\triangle_down_right.png" />
+    <Content Include="Styles\images\icons\dark\triangle_left.png" />
+    <Content Include="Styles\images\icons\dark\triangle_left_right.png" />
+    <Content Include="Styles\images\icons\dark\triangle_right.png" />
+    <Content Include="Styles\images\icons\dark\triangle_up.png" />
+    <Content Include="Styles\images\icons\dark\triangle_up_down.png" />
+    <Content Include="Styles\images\icons\dark\triangle_up_left.png" />
+    <Content Include="Styles\images\icons\dark\triangle_up_right.png" />
+    <Content Include="Styles\images\icons\dark\trolly.png" />
+    <Content Include="Styles\images\icons\dark\truck.png" />
+    <Content Include="Styles\images\icons\dark\tumbler.png" />
+    <Content Include="Styles\images\icons\dark\twitter.png" />
+    <Content Include="Styles\images\icons\dark\twitter_2.png" />
+    <Content Include="Styles\images\icons\dark\typo.png" />
+    <Content Include="Styles\images\icons\dark\umbrella.png" />
+    <Content Include="Styles\images\icons\dark\under_construction.png" />
+    <Content Include="Styles\images\icons\dark\unlocked.png" />
+    <Content Include="Styles\images\icons\dark\upload.png" />
+    <Content Include="Styles\images\icons\dark\user.png" />
+    <Content Include="Styles\images\icons\dark\users.png" />
+    <Content Include="Styles\images\icons\dark\users_2.png" />
+    <Content Include="Styles\images\icons\dark\user_2.png" />
+    <Content Include="Styles\images\icons\dark\user_comment.png" />
+    <Content Include="Styles\images\icons\dark\v-card.png" />
+    <Content Include="Styles\images\icons\dark\v-card_2.png" />
+    <Content Include="Styles\images\icons\dark\vault.png" />
+    <Content Include="Styles\images\icons\dark\vimeo.png" />
+    <Content Include="Styles\images\icons\dark\vimeo_2.png" />
+    <Content Include="Styles\images\icons\dark\walking_man.png" />
+    <Content Include="Styles\images\icons\dark\wifi_signal.png" />
+    <Content Include="Styles\images\icons\dark\wifi_signal_2.png" />
+    <Content Include="Styles\images\icons\dark\windows.png" />
+    <Content Include="Styles\images\icons\dark\winner_podium.png" />
+    <Content Include="Styles\images\icons\dark\wizard.png" />
+    <Content Include="Styles\images\icons\dark\wordpress.png" />
+    <Content Include="Styles\images\icons\dark\wordpress_2.png" />
+    <Content Include="Styles\images\icons\dark\word_document.png" />
+    <Content Include="Styles\images\icons\dark\word_documents.png" />
+    <Content Include="Styles\images\icons\dark\youtube.png" />
+    <Content Include="Styles\images\icons\dark\youtube_2.png" />
+    <Content Include="Styles\images\icons\dark\zip_file.png" />
+    <Content Include="Styles\images\icons\dark\zip_files.png" />
+    <Content Include="Styles\images\icons\light\abacus.png" />
+    <Content Include="Styles\images\icons\light\access_denied.png" />
+    <Content Include="Styles\images\icons\light\address_book.png" />
+    <Content Include="Styles\images\icons\light\admin_user.png" />
+    <Content Include="Styles\images\icons\light\admin_user_2.png" />
+    <Content Include="Styles\images\icons\light\airplane.png" />
+    <Content Include="Styles\images\icons\light\alarm.png" />
+    <Content Include="Styles\images\icons\light\alarm_2.png" />
+    <Content Include="Styles\images\icons\light\alarm_clock.png" />
+    <Content Include="Styles\images\icons\light\alert.png" />
+    <Content Include="Styles\images\icons\light\android.png" />
+    <Content Include="Styles\images\icons\light\application.png" />
+    <Content Include="Styles\images\icons\light\archive.png" />
+    <Content Include="Styles\images\icons\light\arrow_down.png" />
+    <Content Include="Styles\images\icons\light\arrow_down_left.png" />
+    <Content Include="Styles\images\icons\light\arrow_down_right.png" />
+    <Content Include="Styles\images\icons\light\arrow_left.png" />
+    <Content Include="Styles\images\icons\light\arrow_right.png" />
+    <Content Include="Styles\images\icons\light\arrow_up.png" />
+    <Content Include="Styles\images\icons\light\arrow_up_left.png" />
+    <Content Include="Styles\images\icons\light\arrow_up_right.png" />
+    <Content Include="Styles\images\icons\light\bag.png" />
+    <Content Include="Styles\images\icons\light\balloons.png" />
+    <Content Include="Styles\images\icons\light\bandaid.png" />
+    <Content Include="Styles\images\icons\light\battery.png" />
+    <Content Include="Styles\images\icons\light\battery_33.png" />
+    <Content Include="Styles\images\icons\light\battery_66.png" />
+    <Content Include="Styles\images\icons\light\battery_empty.png" />
+    <Content Include="Styles\images\icons\light\battery_full.png" />
+    <Content Include="Styles\images\icons\light\bended_arrow_down.png" />
+    <Content Include="Styles\images\icons\light\bended_arrow_left.png" />
+    <Content Include="Styles\images\icons\light\bended_arrow_right.png" />
+    <Content Include="Styles\images\icons\light\bended_arrow_up.png" />
+    <Content Include="Styles\images\icons\light\big_brush.png" />
+    <Content Include="Styles\images\icons\light\blackberry.png" />
+    <Content Include="Styles\images\icons\light\blocks_images.png" />
+    <Content Include="Styles\images\icons\light\blu-ray.png" />
+    <Content Include="Styles\images\icons\light\bluetooth.png" />
+    <Content Include="Styles\images\icons\light\bluetooth_2.png" />
+    <Content Include="Styles\images\icons\light\book.png" />
+    <Content Include="Styles\images\icons\light\books.png" />
+    <Content Include="Styles\images\icons\light\book_large.png" />
+    <Content Include="Styles\images\icons\light\breadcrumb.png" />
+    <Content Include="Styles\images\icons\light\brush.png" />
+    <Content Include="Styles\images\icons\light\buildings.png" />
+    <Content Include="Styles\images\icons\light\bulls_eye.png" />
+    <Content Include="Styles\images\icons\light\calculator.png" />
+    <Content Include="Styles\images\icons\light\calendar.png" />
+    <Content Include="Styles\images\icons\light\calendar_day.png" />
+    <Content Include="Styles\images\icons\light\camera.png" />
+    <Content Include="Styles\images\icons\light\camera_2.png" />
+    <Content Include="Styles\images\icons\light\car.png" />
+    <Content Include="Styles\images\icons\light\cash_register.png" />
+    <Content Include="Styles\images\icons\light\cassette.png" />
+    <Content Include="Styles\images\icons\light\cat.png" />
+    <Content Include="Styles\images\icons\light\cd.png" />
+    <Content Include="Styles\images\icons\light\chair.png" />
+    <Content Include="Styles\images\icons\light\chart.png" />
+    <Content Include="Styles\images\icons\light\chart_2.png" />
+    <Content Include="Styles\images\icons\light\chart_3.png" />
+    <Content Include="Styles\images\icons\light\chart_4.png" />
+    <Content Include="Styles\images\icons\light\chart_5.png" />
+    <Content Include="Styles\images\icons\light\chart_6.png" />
+    <Content Include="Styles\images\icons\light\chart_7.png" />
+    <Content Include="Styles\images\icons\light\chart_8.png" />
+    <Content Include="Styles\images\icons\light\chemical.png" />
+    <Content Include="Styles\images\icons\light\chrome.png" />
+    <Content Include="Styles\images\icons\light\clipboard.png" />
+    <Content Include="Styles\images\icons\light\clock.png" />
+    <Content Include="Styles\images\icons\light\cloud.png" />
+    <Content Include="Styles\images\icons\light\cloud_download.png" />
+    <Content Include="Styles\images\icons\light\cloud_upload.png" />
+    <Content Include="Styles\images\icons\light\cog.png" />
+    <Content Include="Styles\images\icons\light\cog_2.png" />
+    <Content Include="Styles\images\icons\light\cog_3.png" />
+    <Content Include="Styles\images\icons\light\cog_4.png" />
+    <Content Include="Styles\images\icons\light\collapse.png" />
+    <Content Include="Styles\images\icons\light\companies.png" />
+    <Content Include="Styles\images\icons\light\compress.png" />
+    <Content Include="Styles\images\icons\light\copy.png" />
+    <Content Include="Styles\images\icons\light\coverflow.png" />
+    <Content Include="Styles\images\icons\light\create_write.png" />
+    <Content Include="Styles\images\icons\light\cross.png" />
+    <Content Include="Styles\images\icons\light\cup.png" />
+    <Content Include="Styles\images\icons\light\cursor.png" />
+    <Content Include="Styles\images\icons\light\delicious.png" />
+    <Content Include="Styles\images\icons\light\desk.png" />
+    <Content Include="Styles\images\icons\light\digg.png" />
+    <Content Include="Styles\images\icons\light\digg_2.png" />
+    <Content Include="Styles\images\icons\light\document.png" />
+    <Content Include="Styles\images\icons\light\documents.png" />
+    <Content Include="Styles\images\icons\light\document_add.png" />
+    <Content Include="Styles\images\icons\light\document_delete.png" />
+    <Content Include="Styles\images\icons\light\download.png" />
+    <Content Include="Styles\images\icons\light\download_to_computer.png" />
+    <Content Include="Styles\images\icons\light\dress.png" />
+    <Content Include="Styles\images\icons\light\dribbble.png" />
+    <Content Include="Styles\images\icons\light\dribbble_2.png" />
+    <Content Include="Styles\images\icons\light\dropbox.png" />
+    <Content Include="Styles\images\icons\light\drupal.png" />
+    <Content Include="Styles\images\icons\light\duplicate.png" />
+    <Content Include="Styles\images\icons\light\dvd.png" />
+    <Content Include="Styles\images\icons\light\eject.png" />
+    <Content Include="Styles\images\icons\light\electricty_input.png" />
+    <Content Include="Styles\images\icons\light\electricty_plug.png" />
+    <Content Include="Styles\images\icons\light\empty.png" />
+    <Content Include="Styles\images\icons\light\excel_document.png" />
+    <Content Include="Styles\images\icons\light\excel_documents.png" />
+    <Content Include="Styles\images\icons\light\exclamation.png" />
+    <Content Include="Styles\images\icons\light\exit.png" />
+    <Content Include="Styles\images\icons\light\expand.png" />
+    <Content Include="Styles\images\icons\light\expose.png" />
+    <Content Include="Styles\images\icons\light\expression_engine.png" />
+    <Content Include="Styles\images\icons\light\eyedropper.png" />
+    <Content Include="Styles\images\icons\light\facebook.png" />
+    <Content Include="Styles\images\icons\light\facebook_like.png" />
+    <Content Include="Styles\images\icons\light\fax.png" />
+    <Content Include="Styles\images\icons\light\female.png" />
+    <Content Include="Styles\images\icons\light\female_contour.png" />
+    <Content Include="Styles\images\icons\light\file_cabinet.png" />
+    <Content Include="Styles\images\icons\light\film.png" />
+    <Content Include="Styles\images\icons\light\filmcamera.png" />
+    <Content Include="Styles\images\icons\light\film_2.png" />
+    <Content Include="Styles\images\icons\light\finish_flag.png" />
+    <Content Include="Styles\images\icons\light\firefox.png" />
+    <Content Include="Styles\images\icons\light\flag.png" />
+    <Content Include="Styles\images\icons\light\flag_2.png" />
+    <Content Include="Styles\images\icons\light\folder.png" />
+    <Content Include="Styles\images\icons\light\folder_add.png" />
+    <Content Include="Styles\images\icons\light\folder_closed.png" />
+    <Content Include="Styles\images\icons\light\folder_delete.png" />
+    <Content Include="Styles\images\icons\light\folder_download.png" />
+    <Content Include="Styles\images\icons\light\folder_lock.png" />
+    <Content Include="Styles\images\icons\light\folder_love.png" />
+    <Content Include="Styles\images\icons\light\folder_upload.png" />
+    <Content Include="Styles\images\icons\light\footprint.png" />
+    <Content Include="Styles\images\icons\light\forward.png" />
+    <Content Include="Styles\images\icons\light\fountain_pen.png" />
+    <Content Include="Styles\images\icons\light\frames.png" />
+    <Content Include="Styles\images\icons\light\fullscreen.png" />
+    <Content Include="Styles\images\icons\light\globe.png" />
+    <Content Include="Styles\images\icons\light\globe_2.png" />
+    <Content Include="Styles\images\icons\light\google_buzz.png" />
+    <Content Include="Styles\images\icons\light\google_maps.png" />
+    <Content Include="Styles\images\icons\light\graph.png" />
+    <Content Include="Styles\images\icons\light\grid.png" />
+    <Content Include="Styles\images\icons\light\hd.png" />
+    <Content Include="Styles\images\icons\light\hd_2.png" />
+    <Content Include="Styles\images\icons\light\hd_3.png" />
+    <Content Include="Styles\images\icons\light\headphones.png" />
+    <Content Include="Styles\images\icons\light\help.png" />
+    <Content Include="Styles\images\icons\light\house.png" />
+    <Content Include="Styles\images\icons\light\house_2.png" />
+    <Content Include="Styles\images\icons\light\ice_cream.png" />
+    <Content Include="Styles\images\icons\light\ice_cream_2.png" />
+    <Content Include="Styles\images\icons\light\ichat.png" />
+    <Content Include="Styles\images\icons\light\imac.png" />
+    <Content Include="Styles\images\icons\light\image.png" />
+    <Content Include="Styles\images\icons\light\images.png" />
+    <Content Include="Styles\images\icons\light\images_2.png" />
+    <Content Include="Styles\images\icons\light\image_2.png" />
+    <Content Include="Styles\images\icons\light\inbox.png" />
+    <Content Include="Styles\images\icons\light\incomming.png" />
+    <Content Include="Styles\images\icons\light\information.png" />
+    <Content Include="Styles\images\icons\light\ipad.png" />
+    <Content Include="Styles\images\icons\light\iphone_3g.png" />
+    <Content Include="Styles\images\icons\light\iphone_4.png" />
+    <Content Include="Styles\images\icons\light\ipod.png" />
+    <Content Include="Styles\images\icons\light\ipod_nano.png" />
+    <Content Include="Styles\images\icons\light\joomla.png" />
+    <Content Include="Styles\images\icons\light\key.png" />
+    <Content Include="Styles\images\icons\light\key_2.png" />
+    <Content Include="Styles\images\icons\light\ladys_purse.png" />
+    <Content Include="Styles\images\icons\light\lamp.png" />
+    <Content Include="Styles\images\icons\light\laptop.png" />
+    <Content Include="Styles\images\icons\light\lastfm.png" />
+    <Content Include="Styles\images\icons\light\lemonade_stand.png" />
+    <Content Include="Styles\images\icons\light\light_bulb.png" />
+    <Content Include="Styles\images\icons\light\link.png" />
+    <Content Include="Styles\images\icons\light\link_2.png" />
+    <Content Include="Styles\images\icons\light\linux.png" />
+    <Content Include="Styles\images\icons\light\list.png" />
+    <Content Include="Styles\images\icons\light\list_image.png" />
+    <Content Include="Styles\images\icons\light\list_images.png" />
+    <Content Include="Styles\images\icons\light\loading_bar.png" />
+    <Content Include="Styles\images\icons\light\locked.png" />
+    <Content Include="Styles\images\icons\light\locked_2.png" />
+    <Content Include="Styles\images\icons\light\macos.png" />
+    <Content Include="Styles\images\icons\light\magic_mouse.png" />
+    <Content Include="Styles\images\icons\light\magnifying_glass.png" />
+    <Content Include="Styles\images\icons\light\mail.png" />
+    <Content Include="Styles\images\icons\light\male.png" />
+    <Content Include="Styles\images\icons\light\male_contour.png" />
+    <Content Include="Styles\images\icons\light\map.png" />
+    <Content Include="Styles\images\icons\light\marker.png" />
+    <Content Include="Styles\images\icons\light\maximize.png" />
+    <Content Include="Styles\images\icons\light\medical_case.png" />
+    <Content Include="Styles\images\icons\light\megaphone.png" />
+    <Content Include="Styles\images\icons\light\microphone.png" />
+    <Content Include="Styles\images\icons\light\mighty_mouse.png" />
+    <Content Include="Styles\images\icons\light\minimize.png" />
+    <Content Include="Styles\images\icons\light\minus.png" />
+    <Content Include="Styles\images\icons\light\mobile_phone.png" />
+    <Content Include="Styles\images\icons\light\mobypicture.png" />
+    <Content Include="Styles\images\icons\light\money.png" />
+    <Content Include="Styles\images\icons\light\money_2.png" />
+    <Content Include="Styles\images\icons\light\monitor.png" />
+    <Content Include="Styles\images\icons\light\mouse.png" />
+    <Content Include="Styles\images\icons\light\myspace.png" />
+    <Content Include="Styles\images\icons\light\next.png" />
+    <Content Include="Styles\images\icons\light\note_book.png" />
+    <Content Include="Styles\images\icons\light\outgoing.png" />
+    <Content Include="Styles\images\icons\light\pacman.png" />
+    <Content Include="Styles\images\icons\light\pacman_ghost.png" />
+    <Content Include="Styles\images\icons\light\paint_brush.png" />
+    <Content Include="Styles\images\icons\light\pants.png" />
+    <Content Include="Styles\images\icons\light\paperclip.png" />
+    <Content Include="Styles\images\icons\light\paste.png" />
+    <Content Include="Styles\images\icons\light\pause.png" />
+    <Content Include="Styles\images\icons\light\paypal.png" />
+    <Content Include="Styles\images\icons\light\paypal_2.png" />
+    <Content Include="Styles\images\icons\light\paypal_3.png" />
+    <Content Include="Styles\images\icons\light\pdf_document.png" />
+    <Content Include="Styles\images\icons\light\pdf_documents.png" />
+    <Content Include="Styles\images\icons\light\pencil.png" />
+    <Content Include="Styles\images\icons\light\phone.png" />
+    <Content Include="Styles\images\icons\light\phone_2.png" />
+    <Content Include="Styles\images\icons\light\phone_hook.png" />
+    <Content Include="Styles\images\icons\light\piggy_bank.png" />
+    <Content Include="Styles\images\icons\light\plane_suitecase.png" />
+    <Content Include="Styles\images\icons\light\play.png" />
+    <Content Include="Styles\images\icons\light\plixi.png" />
+    <Content Include="Styles\images\icons\light\plus.png" />
+    <Content Include="Styles\images\icons\light\post_card.png" />
+    <Content Include="Styles\images\icons\light\power.png" />
+    <Content Include="Styles\images\icons\light\powerpoint_document.png" />
+    <Content Include="Styles\images\icons\light\powerpoint_documents.png" />
+    <Content Include="Styles\images\icons\light\presentation.png" />
+    <Content Include="Styles\images\icons\light\prev.png" />
+    <Content Include="Styles\images\icons\light\preview.png" />
+    <Content Include="Styles\images\icons\light\price_tag.png" />
+    <Content Include="Styles\images\icons\light\price_tags.png" />
+    <Content Include="Styles\images\icons\light\printer.png" />
+    <Content Include="Styles\images\icons\light\question.png" />
+    <Content Include="Styles\images\icons\light\radio.png" />
+    <Content Include="Styles\images\icons\light\record.png" />
+    <Content Include="Styles\images\icons\light\recycle.png" />
+    <Content Include="Styles\images\icons\light\refresh.png" />
+    <Content Include="Styles\images\icons\light\refresh_2.png" />
+    <Content Include="Styles\images\icons\light\refresh_3.png" />
+    <Content Include="Styles\images\icons\light\refresh_4.png" />
+    <Content Include="Styles\images\icons\light\repeat.png" />
+    <Content Include="Styles\images\icons\light\rewind.png" />
+    <Content Include="Styles\images\icons\light\robot.png" />
+    <Content Include="Styles\images\icons\light\rss.png" />
+    <Content Include="Styles\images\icons\light\ruler.png" />
+    <Content Include="Styles\images\icons\light\ruler_2.png" />
+    <Content Include="Styles\images\icons\light\running_man.png" />
+    <Content Include="Styles\images\icons\light\safari.png" />
+    <Content Include="Styles\images\icons\light\scan_label.png" />
+    <Content Include="Styles\images\icons\light\scissors.png" />
+    <Content Include="Styles\images\icons\light\sd.png" />
+    <Content Include="Styles\images\icons\light\sd_2.png" />
+    <Content Include="Styles\images\icons\light\sd_3.png" />
+    <Content Include="Styles\images\icons\light\settings.png" />
+    <Content Include="Styles\images\icons\light\settings_2.png" />
+    <Content Include="Styles\images\icons\light\shopping_bag.png" />
+    <Content Include="Styles\images\icons\light\shopping_basket.png" />
+    <Content Include="Styles\images\icons\light\shopping_basket_2.png" />
+    <Content Include="Styles\images\icons\light\shopping_cart.png" />
+    <Content Include="Styles\images\icons\light\shopping_cart_2.png" />
+    <Content Include="Styles\images\icons\light\shopping_cart_3.png" />
+    <Content Include="Styles\images\icons\light\shopping_cart_4.png" />
+    <Content Include="Styles\images\icons\light\shuffle.png" />
+    <Content Include="Styles\images\icons\light\sign_post.png" />
+    <Content Include="Styles\images\icons\light\skype.png" />
+    <Content Include="Styles\images\icons\light\sleeveless_shirt.png" />
+    <Content Include="Styles\images\icons\light\socks.png" />
+    <Content Include="Styles\images\icons\light\sound.png" />
+    <Content Include="Styles\images\icons\light\speech_bubble.png" />
+    <Content Include="Styles\images\icons\light\speech_bubbles.png" />
+    <Content Include="Styles\images\icons\light\speech_bubbles_2.png" />
+    <Content Include="Styles\images\icons\light\speech_bubble_2.png" />
+    <Content Include="Styles\images\icons\light\sport_shirt.png" />
+    <Content Include="Styles\images\icons\light\stop.png" />
+    <Content Include="Styles\images\icons\light\stop_watch.png" />
+    <Content Include="Styles\images\icons\light\strategy.png" />
+    <Content Include="Styles\images\icons\light\strategy_2.png" />
+    <Content Include="Styles\images\icons\light\stubleupon.png" />
+    <Content Include="Styles\images\icons\light\suitecase.png" />
+    <Content Include="Styles\images\icons\light\sweater.png" />
+    <Content Include="Styles\images\icons\light\t-shirt.png" />
+    <Content Include="Styles\images\icons\light\table.png" />
+    <Content Include="Styles\images\icons\light\tag.png" />
+    <Content Include="Styles\images\icons\light\tags.png" />
+    <Content Include="Styles\images\icons\light\television.png" />
+    <Content Include="Styles\images\icons\light\tick.png" />
+    <Content Include="Styles\images\icons\light\timer.png" />
+    <Content Include="Styles\images\icons\light\trashcan.png" />
+    <Content Include="Styles\images\icons\light\trashcan_2.png" />
+    <Content Include="Styles\images\icons\light\travel_suitecase.png" />
+    <Content Include="Styles\images\icons\light\tree.png" />
+    <Content Include="Styles\images\icons\light\triangle_double_down.png" />
+    <Content Include="Styles\images\icons\light\triangle_double_left.png" />
+    <Content Include="Styles\images\icons\light\triangle_double_right.png" />
+    <Content Include="Styles\images\icons\light\triangle_double_up.png" />
+    <Content Include="Styles\images\icons\light\triangle_down.png" />
+    <Content Include="Styles\images\icons\light\triangle_down_left.png" />
+    <Content Include="Styles\images\icons\light\triangle_down_right.png" />
+    <Content Include="Styles\images\icons\light\triangle_left.png" />
+    <Content Include="Styles\images\icons\light\triangle_left_right.png" />
+    <Content Include="Styles\images\icons\light\triangle_right.png" />
+    <Content Include="Styles\images\icons\light\triangle_up.png" />
+    <Content Include="Styles\images\icons\light\triangle_up_down.png" />
+    <Content Include="Styles\images\icons\light\triangle_up_left.png" />
+    <Content Include="Styles\images\icons\light\triangle_up_right.png" />
+    <Content Include="Styles\images\icons\light\trolly.png" />
+    <Content Include="Styles\images\icons\light\truck.png" />
+    <Content Include="Styles\images\icons\light\tumbler.png" />
+    <Content Include="Styles\images\icons\light\twitter.png" />
+    <Content Include="Styles\images\icons\light\twitter_2.png" />
+    <Content Include="Styles\images\icons\light\typo.png" />
+    <Content Include="Styles\images\icons\light\umbrella.png" />
+    <Content Include="Styles\images\icons\light\under_construction.png" />
+    <Content Include="Styles\images\icons\light\unlocked.png" />
+    <Content Include="Styles\images\icons\light\upload.png" />
+    <Content Include="Styles\images\icons\light\user.png" />
+    <Content Include="Styles\images\icons\light\users.png" />
+    <Content Include="Styles\images\icons\light\users_2.png" />
+    <Content Include="Styles\images\icons\light\user_2.png" />
+    <Content Include="Styles\images\icons\light\user_comment.png" />
+    <Content Include="Styles\images\icons\light\v-card.png" />
+    <Content Include="Styles\images\icons\light\v-card_2.png" />
+    <Content Include="Styles\images\icons\light\vault.png" />
+    <Content Include="Styles\images\icons\light\vimeo.png" />
+    <Content Include="Styles\images\icons\light\vimeo_2.png" />
+    <Content Include="Styles\images\icons\light\walking_man.png" />
+    <Content Include="Styles\images\icons\light\wifi_signal.png" />
+    <Content Include="Styles\images\icons\light\wifi_signal_2.png" />
+    <Content Include="Styles\images\icons\light\windows.png" />
+    <Content Include="Styles\images\icons\light\winner_podium.png" />
+    <Content Include="Styles\images\icons\light\wizard.png" />
+    <Content Include="Styles\images\icons\light\wordpress.png" />
+    <Content Include="Styles\images\icons\light\wordpress_2.png" />
+    <Content Include="Styles\images\icons\light\word_document.png" />
+    <Content Include="Styles\images\icons\light\word_documents.png" />
+    <Content Include="Styles\images\icons\light\youtube.png" />
+    <Content Include="Styles\images\icons\light\youtube_2.png" />
+    <Content Include="Styles\images\icons\light\zip_file.png" />
+    <Content Include="Styles\images\icons\light\zip_files.png" />
+    <Content Include="Styles\images\loading.gif" />
+    <Content Include="Styles\images\numbers.gif" />
+    <Content Include="Styles\images\numbers.png" />
+    <Content Include="Styles\images\paper_01.png" />
+    <Content Include="Styles\images\paper_02.png" />
+    <Content Include="Styles\images\profile-hover.jpg" />
+    <Content Include="Styles\images\profile.jpg" />
+    <Content Include="Styles\images\shadow_left.png" />
+    <Content Include="Styles\images\shadow_right.png" />
+    <Content Include="Styles\images\toggle-sprite.png" />
+    <Content Include="Styles\ims.css" />
+    <Content Include="Styles\jquery.countdown.css" />
+    <Content Include="Styles\jquery.cursorMessage.css" />
+    <Content Include="Styles\jquery.fileupload-ui.css" />
+    <Content Include="Styles\jquery.loader.js" />
+    <Content Include="Styles\jquery.loadmask.css" />
+    <Content Include="Styles\land.css" />
+    <Content Include="Styles\less-1.1.3.min.js" />
+    <Content Include="Styles\lionbars.css" />
+    <Content Include="Styles\mbContainer.css" />
+    <Content Include="Styles\order.css" />
+    <Content Include="Styles\partsportal.css" />
+    <Content Include="Styles\sidebarsearch.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Styles\styles.css" />
+    <Content Include="Styles\sweetalert2.css" />
+    <Content Include="Styles\theme.css" />
+    <Content Include="Styles\tier.css" />
+    <Content Include="Styles\transmission.css" />
+    <Content Include="Styles\ui-black\ig.ui.editors-min.css" />
+    <Content Include="Styles\ui-black\ig.ui.editors.css" />
+    <Content Include="Styles\ui-black\ig.ui.fileupload-min.css" />
+    <Content Include="Styles\ui-black\ig.ui.fileupload.css" />
+    <Content Include="Styles\ui-black\ig.ui.grid-min.css" />
+    <Content Include="Styles\ui-black\ig.ui.grid.css" />
+    <Content Include="Styles\ui-black\ig.ui.grid_VD-min.css" />
+    <Content Include="Styles\ui-black\ig.ui.grid_VD.css" />
+    <Content Include="Styles\ui-black\ig.ui.rating-min.css" />
+    <Content Include="Styles\ui-black\ig.ui.rating.css" />
+    <Content Include="Styles\ui-black\ig.ui.shared-min.css" />
+    <Content Include="Styles\ui-black\ig.ui.shared.css" />
+    <Content Include="Styles\ui-black\ig.ui.validator-min.css" />
+    <Content Include="Styles\ui-black\ig.ui.validator.css" />
+    <Content Include="Styles\ui-black\ig.ui.videoplayer-min.css" />
+    <Content Include="Styles\ui-black\ig.ui.videoplayer.css" />
+    <Content Include="Styles\ui-black\images\buttonSprite.png" />
+    <Content Include="Styles\ui-black\images\button_bg.png" />
+    <Content Include="Styles\ui-black\images\curvedShadowSprite.jpg" />
+    <Content Include="Styles\ui-black\images\dataGridHeader.png" />
+    <Content Include="Styles\ui-black\images\datepicker.gif" />
+    <Content Include="Styles\ui-black\images\expand.gif" />
+    <Content Include="Styles\ui-black\images\icon_sprite.png" />
+    <Content Include="Styles\ui-black\images\ig-rating-red.png" />
+    <Content Include="Styles\ui-black\images\ig.ui.grid_VD-min.css" />
+    <Content Include="Styles\ui-black\images\igBigPauseButton.png" />
+    <Content Include="Styles\ui-black\images\igBigPlayButton.png" />
+    <Content Include="Styles\ui-black\images\igg_BottomDragIndicator.png" />
+    <Content Include="Styles\ui-black\images\igg_Filter.gif" />
+    <Content Include="Styles\ui-black\images\igg_FilterApplied.gif" />
+    <Content Include="Styles\ui-black\images\igg_Fix.gif" />
+    <Content Include="Styles\ui-black\images\igg_FixHover.gif" />
+    <Content Include="Styles\ui-black\images\igg_header.gif" />
+    <Content Include="Styles\ui-black\images\igg_sortAsc.gif" />
+    <Content Include="Styles\ui-black\images\igg_sortDesc.gif" />
+    <Content Include="Styles\ui-black\images\igg_Sprite.png" />
+    <Content Include="Styles\ui-black\images\igg_Sum.gif" />
+    <Content Include="Styles\ui-black\images\igg_SumHover.gif" />
+    <Content Include="Styles\ui-black\images\igg_SumPressed.gif" />
+    <Content Include="Styles\ui-black\images\igg_TopDragIndicator.png" />
+    <Content Include="Styles\ui-black\images\igg_Unfix.gif" />
+    <Content Include="Styles\ui-black\images\igg_UnfixHover.gif" />
+    <Content Include="Styles\ui-black\images\igg_UnfixPressed.gif" />
+    <Content Include="Styles\ui-black\images\igLoadingSmall.gif" />
+    <Content Include="Styles\ui-black\images\progress_bar.gif" />
+    <Content Include="Styles\ui-black\images\slider_handles.png" />
+    <Content Include="Styles\ui-black\images\slider_h_bg.gif" />
+    <Content Include="Styles\ui-black\images\slider_v_bg.gif" />
+    <Content Include="Styles\ui-black\images\tab_bg.gif" />
+    <Content Include="Styles\ui-black\images\the_gradient.gif" />
+    <Content Include="Styles\ui-black\images\ui-anim_basic_16x16.gif" />
+    <Content Include="Styles\ui-black\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Styles\ui-black\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Styles\ui-black\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Styles\ui-black\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Styles\ui-black\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Styles\ui-black\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Styles\ui-black\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Styles\ui-black\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Styles\ui-black\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Styles\ui-black\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Styles\ui-black\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Styles\ui-black\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Styles\ui-black\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Styles\ui-black\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Styles\ui-black\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Styles\ui-black\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Styles\ui-black\images\ui-icons_222222_256x240.png" />
+    <Content Include="Styles\ui-black\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Styles\ui-black\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Styles\ui-black\images\ui-icons_454545_256x240.png" />
+    <Content Include="Styles\ui-black\images\ui-icons_888888_256x240.png" />
+    <Content Include="Styles\ui-black\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Styles\ui-black\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Styles\ui-black\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Styles\ui-black\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\ui-black\images\ui-igrating.png" />
+    <Content Include="Styles\ui-black\jquery.ui.all.css" />
+    <Content Include="Styles\ui-black\jquery.ui.base.css" />
+    <Content Include="Styles\ui-black\jquery.ui.core.css" />
+    <Content Include="Styles\ui-black\jquery.ui.css" />
+    <Content Include="Styles\ui-black\jquery.ui.custom.css" />
+    <Content Include="Styles\ui-black\jquery.ui.datepicker.css" />
+    <Content Include="Styles\ui-black\jquery.ui.slider.css" />
+    <Content Include="Styles\ui-black\jquery.ui.theme.css" />
+    <Content Include="Styles\ui-black\Site.css" />
+    <Content Include="Styles\ui-theme-start\images\ui-bg_flat_55_999999_40x100.png" />
+    <Content Include="Styles\ui-theme-start\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Styles\ui-theme-start\images\ui-bg_glass_45_0078ae_1x400.png" />
+    <Content Include="Styles\ui-theme-start\images\ui-bg_glass_55_f8da4e_1x400.png" />
+    <Content Include="Styles\ui-theme-start\images\ui-bg_glass_75_79c9ec_1x400.png" />
+    <Content Include="Styles\ui-theme-start\images\ui-bg_gloss-wave_45_e14f1c_500x100.png" />
+    <Content Include="Styles\ui-theme-start\images\ui-bg_gloss-wave_50_6eac2c_500x100.png" />
+    <Content Include="Styles\ui-theme-start\images\ui-bg_gloss-wave_75_2191c0_500x100.png" />
+    <Content Include="Styles\ui-theme-start\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Styles\ui-theme-start\images\ui-icons_0078ae_256x240.png" />
+    <Content Include="Styles\ui-theme-start\images\ui-icons_056b93_256x240.png" />
+    <Content Include="Styles\ui-theme-start\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Styles\ui-theme-start\images\ui-icons_e0fdff_256x240.png" />
+    <Content Include="Styles\ui-theme-start\images\ui-icons_f5e175_256x240.png" />
+    <Content Include="Styles\ui-theme-start\images\ui-icons_f7a50d_256x240.png" />
+    <Content Include="Styles\ui-theme-start\images\ui-icons_fcd113_256x240.png" />
+    <Content Include="Styles\ui-theme-start\jquery-ui-1.8.18.custom.css" />
+    <Content Include="Styles\ui-theme-start\jquery.ui.accordion.css" />
+    <Content Include="Styles\ui-theme-start\jquery.ui.all.css" />
+    <Content Include="Styles\ui-theme-start\jquery.ui.autocomplete.css" />
+    <Content Include="Styles\ui-theme-start\jquery.ui.base.css" />
+    <Content Include="Styles\ui-theme-start\jquery.ui.button.css" />
+    <Content Include="Styles\ui-theme-start\jquery.ui.core.css" />
+    <Content Include="Styles\ui-theme-start\jquery.ui.datepicker.css" />
+    <Content Include="Styles\ui-theme-start\jquery.ui.dialog.css" />
+    <Content Include="Styles\ui-theme-start\jquery.ui.progressbar.css" />
+    <Content Include="Styles\ui-theme-start\jquery.ui.resizable.css" />
+    <Content Include="Styles\ui-theme-start\jquery.ui.selectable.css" />
+    <Content Include="Styles\ui-theme-start\jquery.ui.slider.css" />
+    <Content Include="Styles\ui-theme-start\jquery.ui.tabs.css" />
+    <Content Include="Styles\ui-theme-start\jquery.ui.theme.css" />
+    <Content Include="Styles\ui-theme\images\ui-bg_diagonals-thick_40_aaaaaa_40x40.png" />
+    <Content Include="Styles\ui-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Styles\ui-theme\images\ui-bg_flat_40_181818_40x100.png" />
+    <Content Include="Styles\ui-theme\images\ui-bg_flat_55_353535_40x100.png" />
+    <Content Include="Styles\ui-theme\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="Styles\ui-theme\images\ui-bg_flat_75_181818_40x100.png" />
+    <Content Include="Styles\ui-theme\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Styles\ui-theme\images\ui-bg_flat_8_181818_40x100.png" />
+    <Content Include="Styles\ui-theme\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Styles\ui-theme\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Styles\ui-theme\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Styles\ui-theme\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Styles\ui-theme\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Styles\ui-theme\images\ui-bg_highlight-soft_100_f9f9f9_1x100.png" />
+    <Content Include="Styles\ui-theme\images\ui-bg_highlight-soft_50_aaaaaa_1x100.png" />
+    <Content Include="Styles\ui-theme\images\ui-bg_inset-hard_45_cd0a0a_1x100.png" />
+    <Content Include="Styles\ui-theme\images\ui-bg_inset-hard_55_ffeb80_1x100.png" />
+    <Content Include="Styles\ui-theme\images\ui-icons_222222_256x240.png" />
+    <Content Include="Styles\ui-theme\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Styles\ui-theme\images\ui-icons_454545_256x240.png" />
+    <Content Include="Styles\ui-theme\images\ui-icons_4ca300_256x240.png" />
+    <Content Include="Styles\ui-theme\images\ui-icons_888888_256x240.png" />
+    <Content Include="Styles\ui-theme\images\ui-icons_bbbbbb_256x240.png" />
+    <Content Include="Styles\ui-theme\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Styles\ui-theme\images\ui-icons_ededed_256x240.png" />
+    <Content Include="Styles\ui-theme\images\ui-icons_ffcf29_256x240.png" />
+    <Content Include="Styles\ui-theme\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Styles\ui-theme\jquery-ui-1.8.10.custom.css" />
+    <Content Include="Styles\ui.expandable.css" />
+    <Content Include="Styles\uniform.default.css" />
+    <Content Include="Styles\widget.css" />
+    <Content Include="TestWebService.asmx" />
+    <Content Include="TierWebService.asmx" />
+    <Content Include="tracytest.aspx" />
+    <Content Include="TransferCaseWebService.asmx" />
+    <Content Include="TransmissionWebService.asmx" />
+    <Content Include="TransWebService-old.asmx" />
+    <Content Include="Scripts\bootstrap-3.3\bootstrap-3.3.7.js" />
+    <None Include="My Project\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Web References\CertifiedInService2\InServices.wsdl" />
+    <None Include="Web References\CertifiedInService2\InServices.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\CertifiedInService2\InServices0.wsdl" />
+    <None Include="Web References\CertifiedInService2\InServices0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\CertifiedInService2\InServices1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\CertifiedInService2\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\CertifiedInService\InServices.disco" />
+    <None Include="Web References\CertifiedLookup\Lookup.wsdl" />
+    <None Include="Web References\CertifiedLookup\Lookup.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\CertifiedLookup\Lookup0.wsdl" />
+    <None Include="Web References\CertifiedLookup\Lookup0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\CertifiedLookup\Lookup1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\CertifiedLookup\Lookup2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\CertifiedLookup\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\CertifiedSell2\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\CertifiedSell2\Warehouses.wsdl" />
+    <None Include="Web References\CertifiedSell2\Warehouses.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\CertifiedSell2\Warehouses0.wsdl" />
+    <None Include="Web References\CertifiedSell2\Warehouses0.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\CertifiedSell2\Warehouses1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\CertifiedSell\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\CertifiedSell\Warehouses.disco" />
+    <None Include="Web References\CertifiedSignIn\People.disco" />
+    <Content Include="UsedWebService.asmx" />
+    <None Include="Web References\CertifiedLookup\Lookup.disco" />
+    <None Include="Web References\CertifiedSell2\Warehouses.disco" />
+    <None Include="Web References\CertifiedInService2\InServices.disco" />
+    <Content Include="VendorManagementWebService.asmx" />
+    <Content Include="WarrantyWebService.asmx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web.Base.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Base.Debug.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Base.Release.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountingWebService.asmx.vb">
+      <DependentUpon>AccountingWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.vb">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.vb">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminMaintenance.asmx.vb">
+      <DependentUpon>AdminMaintenance.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CkOrderHistroyWebService.asmx.vb">
+      <DependentUpon>CkOrderHistroyWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\BaseApplicationVariables.vb" />
+    <Compile Include="Classes\Company.vb" />
+    <Compile Include="Classes\ConnectionStrings.vb" />
+    <Compile Include="Classes\DataHelper.vb" />
+    <Compile Include="Classes\Enums\DataTypes.vb" />
+    <Compile Include="Classes\Enums\PaymentTypes.vb" />
+    <Compile Include="Classes\Enums\ShipmentTypes.vb" />
+    <Compile Include="Classes\Enums\ShippingDirectionTypes.vb" />
+    <Compile Include="Classes\Enums\ShipmentModes.vb" />
+    <Compile Include="Classes\Enums\FedExShippingTypes.vb" />
+    <Compile Include="Classes\Enums\StatusTypes.vb" />
+    <Compile Include="Classes\Enums\VendorOrderMethods.vb" />
+    <Compile Include="Classes\Extensions\Extensions.vb" />
+    <Compile Include="Classes\FedExAdvancedServicesHelper.vb" />
+    <Compile Include="Classes\FedExGroundShippingHelper.vb" />
+    <Compile Include="Classes\FedExExpressShippingHelper.vb" />
+    <Compile Include="Classes\FedExPickupHelper.vb" />
+    <Compile Include="Classes\FedExRateHelper.vb" />
+    <Compile Include="Classes\FedExPackageDetail.vb" />
+    <Compile Include="Classes\FedExShippingRate.vb" />
+    <Compile Include="Classes\GlobalFunctions.vb" />
+    <Compile Include="Classes\PidgeonMembership.vb" />
+    <Compile Include="Controls\Admin\CKPartsPortal.ascx.designer.vb">
+      <DependentUpon>CKPartsPortal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\CKPartsPortal.ascx.vb">
+      <DependentUpon>CKPartsPortal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\PartNoLookup.ascx.designer.vb">
+      <DependentUpon>PartNoLookup.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\PartNoLookup.ascx.vb">
+      <DependentUpon>PartNoLookup.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\PartsPortal.ascx.designer.vb">
+      <DependentUpon>PartsPortal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\PartsPortal.ascx.vb">
+      <DependentUpon>PartsPortal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\Tier.ascx.designer.vb">
+      <DependentUpon>Tier.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\Tier.ascx.vb">
+      <DependentUpon>Tier.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Admin\Home.ascx.designer.vb">
+      <DependentUpon>Home.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Admin\Home.ascx.vb">
+      <DependentUpon>Home.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\Calculator.ascx.designer.vb">
+      <DependentUpon>Calculator.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\Calculator.ascx.vb">
+      <DependentUpon>Calculator.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Common\VinDecoder.ascx.designer.vb">
+      <DependentUpon>VinDecoder.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Common\VinDecoder.ascx.vb">
+      <DependentUpon>VinDecoder.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Customer\CKPartsPortal.ascx.designer.vb">
+      <DependentUpon>CKPartsPortal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Customer\CKPartsPortal.ascx.vb">
+      <DependentUpon>CKPartsPortal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Customer\Home.ascx.designer.vb">
+      <DependentUpon>Home.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Customer\Home.ascx.vb">
+      <DependentUpon>Home.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Customer\PartsPortal.ascx.designer.vb">
+      <DependentUpon>PartsPortal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Customer\PartsPortal.ascx.vb">
+      <DependentUpon>PartsPortal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerManageWebService.asmx.vb">
+      <DependentUpon>CustomerManageWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DealerCentral.aspx.designer.vb">
+      <DependentUpon>DealerCentral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DealerCentral.aspx.vb">
+      <DependentUpon>DealerCentral.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DifferentialWebService.asmx.vb">
+      <DependentUpon>DifferentialWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsPrintInvoice.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPrintInvoice.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsPrintInvoiceBatch.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPrintInvoiceBatch.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentHandler.ashx.vb">
+      <DependentUpon>DocumentHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="EmailWebService.asmx.vb">
+      <DependentUpon>EmailWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Enums\Enums.vb" />
+    <Compile Include="HomeWebService.asmx.vb">
+      <DependentUpon>HomeWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CoolingWebService.asmx.vb">
+      <DependentUpon>CoolingWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InventoryWebService.asmx.vb">
+      <DependentUpon>InventoryWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.vb">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.vb">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ManualTransmissionWebService.asmx.vb">
+      <DependentUpon>ManualTransmissionWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OrderTrackingWebService.asmx.vb">
+      <DependentUpon>OrderTrackingWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OrderWebService.asmx.vb">
+      <DependentUpon>OrderWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pages\AnotherTest.aspx.designer.vb">
+      <DependentUpon>AnotherTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AnotherTest.aspx.vb">
+      <DependentUpon>AnotherTest.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Arrivals.aspx.designer.vb">
+      <DependentUpon>Arrivals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Arrivals.aspx.vb">
+      <DependentUpon>Arrivals.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ChecksBalances.aspx.designer.vb">
+      <DependentUpon>ChecksBalances.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChecksBalances.aspx.vb">
+      <DependentUpon>ChecksBalances.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CKOrders.aspx.designer.vb">
+      <DependentUpon>CKOrders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CKOrders.aspx.vb">
+      <DependentUpon>CKOrders.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CarmaxPartsPortal.aspx.designer.vb">
+      <DependentUpon>CarmaxPartsPortal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CarmaxPartsPortal.aspx.vb">
+      <DependentUpon>CarmaxPartsPortal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CKPartsPortal.aspx.designer.vb">
+      <DependentUpon>CKPartsPortal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CKPartsPortal.aspx.vb">
+      <DependentUpon>CKPartsPortal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Contacts.aspx.designer.vb">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Contacts.aspx.vb">
+      <DependentUpon>Contacts.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CoolingSearch.aspx.designer.vb">
+      <DependentUpon>CoolingSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CoolingSearch.aspx.vb">
+      <DependentUpon>CoolingSearch.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CustomerManage.aspx.designer.vb">
+      <DependentUpon>CustomerManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CustomerManage.aspx.vb">
+      <DependentUpon>CustomerManage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CustomerRec.aspx.designer.vb">
+      <DependentUpon>CustomerRec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CustomerRec.aspx.vb">
+      <DependentUpon>CustomerRec.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CustomerRelat.aspx.designer.vb">
+      <DependentUpon>CustomerRelat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CustomerRelat.aspx.vb">
+      <DependentUpon>CustomerRelat.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CustomerRelatPrint.aspx.designer.vb">
+      <DependentUpon>CustomerRelatPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CustomerRelatPrint.aspx.vb">
+      <DependentUpon>CustomerRelatPrint.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Dashboard.aspx.designer.vb">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Dashboard.aspx.vb">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\DifferentialIMS.aspx.designer.vb">
+      <DependentUpon>DifferentialIMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DifferentialIMS.aspx.vb">
+      <DependentUpon>DifferentialIMS.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\DifferentialSearch.aspx.designer.vb">
+      <DependentUpon>DifferentialSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DifferentialSearch.aspx.vb">
+      <DependentUpon>DifferentialSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EmailQueue.aspx.designer.vb">
+      <DependentUpon>EmailQueue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EmailQueue.aspx.vb">
+      <DependentUpon>EmailQueue.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EngineIMS.aspx.designer.vb">
+      <DependentUpon>EngineIMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EngineIMS.aspx.vb">
+      <DependentUpon>EngineIMS.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EngineSearch.aspx.designer.vb">
+      <DependentUpon>EngineSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EngineSearch.aspx.vb">
+      <DependentUpon>EngineSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EngineWebService.asmx.vb">
+      <DependentUpon>EngineWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IMSWebService.asmx.vb">
+      <DependentUpon>IMSWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="OEMWebService.asmx.vb">
+      <DependentUpon>OEMWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Pages\ErrorTest.aspx.designer.vb">
+      <DependentUpon>ErrorTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ErrorTest.aspx.vb">
+      <DependentUpon>ErrorTest.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ExcelExport.aspx.designer.vb">
+      <DependentUpon>ExcelExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ExcelExport.aspx.vb">
+      <DependentUpon>ExcelExport.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\FinalizeOrder.aspx.designer.vb">
+      <DependentUpon>FinalizeOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FinalizeOrder.aspx.vb">
+      <DependentUpon>FinalizeOrder.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\FormerTracyCustomerRedirect.aspx.designer.vb">
+      <DependentUpon>FormerTracyCustomerRedirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FormerTracyCustomerRedirect.aspx.vb">
+      <DependentUpon>FormerTracyCustomerRedirect.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Home.aspx.designer.vb">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.aspx.vb">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\IMS.aspx.designer.vb">
+      <DependentUpon>IMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\IMS.aspx.vb">
+      <DependentUpon>IMS.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\IncomeExpense.aspx.designer.vb">
+      <DependentUpon>IncomeExpense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\IncomeExpense.aspx.vb">
+      <DependentUpon>IncomeExpense.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\IncompleteReturnsNoReplacement.aspx.designer.vb">
+      <DependentUpon>IncompleteReturnsNoReplacement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\IncompleteReturnsNoReplacement.aspx.vb">
+      <DependentUpon>IncompleteReturnsNoReplacement.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\IncompleteReturns.aspx.designer.vb">
+      <DependentUpon>IncompleteReturns.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\IncompleteReturns.aspx.vb">
+      <DependentUpon>IncompleteReturns.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\LaborPayCred.aspx.designer.vb">
+      <DependentUpon>LaborPayCred.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LaborPayCred.aspx.vb">
+      <DependentUpon>LaborPayCred.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ManualTransmissionSearch.aspx.designer.vb">
+      <DependentUpon>ManualTransmissionSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ManualTransmissionSearch.aspx.vb">
+      <DependentUpon>ManualTransmissionSearch.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\NewOrder.aspx.designer.vb">
+      <DependentUpon>NewOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NewOrder.aspx.vb">
+      <DependentUpon>NewOrder.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Order.aspx.designer.vb">
+      <DependentUpon>Order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Order.aspx.vb">
+      <DependentUpon>Order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Orders.aspx.designer.vb">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Orders.aspx.vb">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OrderTracking.aspx.designer.vb">
+      <DependentUpon>OrderTracking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OrderTracking.aspx.vb">
+      <DependentUpon>OrderTracking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\OutstandingRecPay.aspx.designer.vb">
+      <DependentUpon>OutstandingRecPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OutstandingRecPay.aspx.vb">
+      <DependentUpon>OutstandingRecPay.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PartOrderMaintenance.aspx.designer.vb">
+      <DependentUpon>PartOrderMaintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PartOrderMaintenance.aspx.vb">
+      <DependentUpon>PartOrderMaintenance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PartsPortal.aspx.designer.vb">
+      <DependentUpon>PartsPortal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PartsPortal.aspx.vb">
+      <DependentUpon>PartsPortal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Payables.aspx.designer.vb">
+      <DependentUpon>Payables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Payables.aspx.vb">
+      <DependentUpon>Payables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PaymentsMarked.aspx.designer.vb">
+      <DependentUpon>PaymentsMarked.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PaymentsMarked.aspx.vb">
+      <DependentUpon>PaymentsMarked.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PaymentsToFrom.aspx.designer.vb">
+      <DependentUpon>PaymentsToFrom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PaymentsToFrom.aspx.vb">
+      <DependentUpon>PaymentsToFrom.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PigeonCarmax.Master.designer.vb">
+      <DependentUpon>PigeonCarmax.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PigeonCarmax.Master.vb">
+      <DependentUpon>PigeonCarmax.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Pigeon.Master.designer.vb">
+      <DependentUpon>Pigeon.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Pigeon.Master.vb">
+      <DependentUpon>Pigeon.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PricingUpdates.aspx.designer.vb">
+      <DependentUpon>PricingUpdates.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PricingUpdates.aspx.vb">
+      <DependentUpon>PricingUpdates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PrintArrivals.aspx.designer.vb">
+      <DependentUpon>PrintArrivals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PrintArrivals.aspx.vb">
+      <DependentUpon>PrintArrivals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PrintCKInvoices.aspx.designer.vb">
+      <DependentUpon>PrintCKInvoices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PrintCKInvoices.aspx.vb">
+      <DependentUpon>PrintCKInvoices.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Profile.aspx.designer.vb">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Profile.aspx.vb">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\QuickPricing.aspx.designer.vb">
+      <DependentUpon>QuickPricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\QuickPricing.aspx.vb">
+      <DependentUpon>QuickPricing.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Quotes.aspx.designer.vb">
+      <DependentUpon>Quotes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Quotes.aspx.vb">
+      <DependentUpon>Quotes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Receivables.aspx.designer.vb">
+      <DependentUpon>Receivables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Receivables.aspx.vb">
+      <DependentUpon>Receivables.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\RemanInventory.aspx.designer.vb">
+      <DependentUpon>RemanInventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RemanInventory.aspx.vb">
+      <DependentUpon>RemanInventory.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SalesVolume.aspx.designer.vb">
+      <DependentUpon>SalesVolume.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SalesVolume.aspx.vb">
+      <DependentUpon>SalesVolume.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\sandbox.aspx.designer.vb">
+      <DependentUpon>sandbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\sandbox.aspx.vb">
+      <DependentUpon>sandbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Search.aspx.designer.vb">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Search.aspx.vb">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\StockOrderImport.aspx.designer.vb">
+      <DependentUpon>StockOrderImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\StockOrderImport.aspx.vb">
+      <DependentUpon>StockOrderImport.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\temp.aspx.designer.vb">
+      <DependentUpon>temp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\temp.aspx.vb">
+      <DependentUpon>temp.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\test.aspx.designer.vb">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\test.aspx.vb">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Tier.aspx.designer.vb">
+      <DependentUpon>Tier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Tier.aspx.vb">
+      <DependentUpon>Tier.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ToOrder.aspx.designer.vb">
+      <DependentUpon>ToOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ToOrder.aspx.vb">
+      <DependentUpon>ToOrder.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TotalGP.aspx.designer.vb">
+      <DependentUpon>TotalGP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TotalGP.aspx.vb">
+      <DependentUpon>TotalGP.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TotalGPWarranty.aspx.designer.vb">
+      <DependentUpon>TotalGPWarranty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TotalGPWarranty.aspx.vb">
+      <DependentUpon>TotalGPWarranty.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TransferCaseSearch.aspx.designer.vb">
+      <DependentUpon>TransferCaseSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TransferCaseSearch.aspx.vb">
+      <DependentUpon>TransferCaseSearch.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TransmissionSearch.aspx.designer.vb">
+      <DependentUpon>TransmissionSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TransmissionSearch.aspx.vb">
+      <DependentUpon>TransmissionSearch.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UsedSearch.aspx.designer.vb">
+      <DependentUpon>UsedSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UsedSearch.aspx.vb">
+      <DependentUpon>UsedSearch.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\VendorManagementPortal.aspx.designer.vb">
+      <DependentUpon>VendorManagementPortal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VendorManagementPortal.aspx.vb">
+      <DependentUpon>VendorManagementPortal.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\VendorManagementPortal1.aspx.designer.vb">
+      <DependentUpon>VendorManagementPortal1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VendorManagementPortal1.aspx.vb">
+      <DependentUpon>VendorManagementPortal1.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\VendorStatsYTD.aspx.designer.vb">
+      <DependentUpon>VendorStatsYTD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\VendorStatsYTD.aspx.vb">
+      <DependentUpon>VendorStatsYTD.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ViewInvoice.aspx.designer.vb">
+      <DependentUpon>ViewInvoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewInvoice.aspx.vb">
+      <DependentUpon>ViewInvoice.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WarrantyComparison.aspx.designer.vb">
+      <DependentUpon>WarrantyComparison.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WarrantyComparison.aspx.vb">
+      <DependentUpon>WarrantyComparison.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WarrantyComparisonTest.aspx.designer.vb">
+      <DependentUpon>WarrantyComparisonTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WarrantyComparisonTest.aspx.vb">
+      <DependentUpon>WarrantyComparisonTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\WarrantyLookup.aspx.designer.vb">
+      <DependentUpon>WarrantyLookup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\WarrantyLookup.aspx.vb">
+      <DependentUpon>WarrantyLookup.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pigeon.vb" />
+    <Compile Include="PigeonWebService.asmx.vb">
+      <DependentUpon>PigeonWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PricingWebService.asmx.vb">
+      <DependentUpon>PricingWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QuickPricingWebService.asmx.vb">
+      <DependentUpon>QuickPricingWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportsWebService.asmx.vb">
+      <DependentUpon>ReportsWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TestWebService.asmx.vb">
+      <DependentUpon>TestWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TierWebService.asmx.vb">
+      <DependentUpon>TierWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="tracytest.aspx.designer.vb">
+      <DependentUpon>tracytest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tracytest.aspx.vb">
+      <DependentUpon>tracytest.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="TransferCaseWebService.asmx.vb">
+      <DependentUpon>TransferCaseWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TransmissionWebService.asmx.vb">
+      <DependentUpon>TransmissionWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TransWebService-old.asmx.vb">
+      <DependentUpon>TransWebService-old.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UsedWebService.asmx.vb">
+      <DependentUpon>UsedWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VendorManagementWebService.asmx.vb">
+      <DependentUpon>VendorManagementWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WarrantyWebService.asmx.vb">
+      <DependentUpon>WarrantyWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Web References\CertifiedInService2\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CertifiedInService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CertifiedLookup\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CertifiedSell2\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CertifiedSell\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CertifiedSignIn\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPrintInvoice.rdlc" />
+    <EmbeddedResource Include="rptPrintInvoiceBatch.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\CertifiedInService\InServices.wsdl" />
+    <None Include="Web References\CertifiedInService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\CertifiedSell\Warehouses.wsdl" />
+    <None Include="Web References\CertifiedSignIn\People.wsdl" />
+    <None Include="Web References\CertifiedSignIn\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="FedExLabels\" />
+    <Folder Include="obj\Debug\" />
+    <Folder Include="Styles\images\icons\dark\dark\" />
+    <Folder Include="Styles\images\icons\light\dark\" />
+    <Folder Include="Styles\images\icons\light\light\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://smtc.certifiedtransmission.com/app/services/external/InServices.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CertifiedInService\</RelPath>
+      <UpdateFromURL>http://smtc.certifiedtransmission.com/app/services/external/InServices.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Pigeon_CertifiedInService_InServices</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://smtc.certifiedtransmission.com/app/services/external/People.asmx%3fop=GetPeople">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CertifiedSignIn\</RelPath>
+      <UpdateFromURL>http://smtc.certifiedtransmission.com/app/services/external/People.asmx%3fop=GetPeople</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Pigeon_CertifiedSignIn_People</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://smtc.certifiedtransmission.com/app/services/external/Warehouses.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CertifiedSell\</RelPath>
+      <UpdateFromURL>http://smtc.certifiedtransmission.com/app/services/external/Warehouses.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Pigeon_CertifiedSell_Warehouses</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://smtc.certifiedtransmission.com/app/wcf/external/InServices.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CertifiedInService2\</RelPath>
+      <UpdateFromURL>http://smtc.certifiedtransmission.com/app/wcf/external/InServices.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Pigeon_CertifiedInService2_InServices</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://smtc.certifiedtransmission.com/app/wcf/external/Lookup.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CertifiedLookup\</RelPath>
+      <UpdateFromURL>http://smtc.certifiedtransmission.com/app/wcf/external/Lookup.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Pigeon_CertifiedLookup_Lookup</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://smtc.certifiedtransmission.com/app/wcf/external/Warehouses.svc">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\CertifiedSell2\</RelPath>
+      <UpdateFromURL>http://smtc.certifiedtransmission.com/app/wcf/external/Warehouses.svc</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Pigeon_CertifiedSell2_Warehouses</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>47976</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" />
+  <Target Name="BeforeBuild" Condition="'$(PublishProfileName)' == '' And '$(WebPublishProfileFile)' == ''">
+    <TransformXml Source="Web.Base.config" Transform="Web.$(Configuration).config" Destination="Web.config" />
+  </Target>
+</Project>

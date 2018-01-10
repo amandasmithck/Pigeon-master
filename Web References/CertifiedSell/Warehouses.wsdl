@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://smtc.certifiedtransmission.com/app/services/external/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://smtc.certifiedtransmission.com/app/services/external/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://smtc.certifiedtransmission.com/app/services/external/">
+      <s:element name="SellPart">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="uWarehouse" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="uSerial" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SellPartResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SellPartResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SellPartSoapIn">
+    <wsdl:part name="parameters" element="tns:SellPart" />
+  </wsdl:message>
+  <wsdl:message name="SellPartSoapOut">
+    <wsdl:part name="parameters" element="tns:SellPartResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WarehousesSoap">
+    <wsdl:operation name="SellPart">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">uKey, uWarehouse and uSerial are required.</wsdl:documentation>
+      <wsdl:input message="tns:SellPartSoapIn" />
+      <wsdl:output message="tns:SellPartSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WarehousesSoap" type="tns:WarehousesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SellPart">
+      <soap:operation soapAction="http://smtc.certifiedtransmission.com/app/services/external/SellPart" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WarehousesSoap12" type="tns:WarehousesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SellPart">
+      <soap12:operation soapAction="http://smtc.certifiedtransmission.com/app/services/external/SellPart" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Warehouses">
+    <wsdl:port name="WarehousesSoap" binding="tns:WarehousesSoap">
+      <soap:address location="http://smtc.certifiedtransmission.com/app/services/external/Warehouses.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WarehousesSoap12" binding="tns:WarehousesSoap12">
+      <soap12:address location="http://smtc.certifiedtransmission.com/app/services/external/Warehouses.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

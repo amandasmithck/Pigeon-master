@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="Pigeon_CertifiedInService_InServices" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://smtc.certifiedtransmission.com/app/services/external/InServices.asmx</Value>
+    </Setting>
+    <Setting Name="Pigeon_CertifiedSell_Warehouses" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://smtc.certifiedtransmission.com/app/services/external/Warehouses.asmx</Value>
+    </Setting>
+    <Setting Name="Pigeon_CertifiedSignIn_People" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://smtc.certifiedtransmission.com/app/services/external/People.asmx</Value>
+    </Setting>
+    <Setting Name="Pigeon_CertifiedLookup_Lookup" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://smtc.certifiedtransmission.com/app/WCF/External/Lookup.svc/basic</Value>
+    </Setting>
+    <Setting Name="Pigeon_CertifiedSell2_Warehouses" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://smtc.certifiedtransmission.com/app/wcf/external/Warehouses.svc/basic</Value>
+    </Setting>
+    <Setting Name="Pigeon_CertifiedInService2_InServices" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://smtc.certifiedtransmission.com/app/wcf/external/InServices.svc/basic</Value>
+    </Setting>
+    <Setting Name="RateWebServiceClient_RateWebReference_RateService" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://ws.fedex.com:443/web-services</Value>
+    </Setting>
+    <Setting Name="ShipWebServiceClient_ShipServiceWebReference_ShipService" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://ws.fedex.com:443/web-services</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

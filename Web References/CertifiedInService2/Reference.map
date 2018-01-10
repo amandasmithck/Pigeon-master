@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://smtc.certifiedtransmission.com/app/wcf/external/InServices.svc?disco" filename="InServices.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://smtc.certifiedtransmission.com/app/wcf/external/InServices.svc?xsd=xsd2" filename="InServices.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://smtc.certifiedtransmission.com/app/wcf/external/InServices.svc?xsd=xsd0" filename="InServices0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://smtc.certifiedtransmission.com/app/wcf/external/InServices.svc?xsd=xsd1" filename="InServices1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://smtc.certifiedtransmission.com/app/wcf/external/InServices.svc?wsdl=wsdl0" filename="InServices.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://smtc.certifiedtransmission.com/app/wcf/external/InServices.svc?wsdl" filename="InServices0.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

@@ -1,0 +1,23 @@
+﻿.results li { list-style:none; float:left; }
+.results ul {width: 100%;height: 22px;}
+.results ul a {
+  display:block;
+  padding:10px 16px;
+  text-decoration:none!important;
+  margin:1px;
+  margin-left:0;
+  font:10px Verdana;
+  color:#000;
+  background:#fff;
+}
+.results ul a:hover {
+  color:#FFF;
+  background:#111;
+  }
+.results ul a.selected {
+  margin-bottom:0;
+  color:#FFF;
+  background:#000;
+  border-bottom:1px solid snow;
+  cursor:default;
+  }

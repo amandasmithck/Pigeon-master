@@ -1,0 +1,29 @@
+﻿table.orderTable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color: #080808;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+
+}
+table.orderTable  {
+ margin-top: 5px;
+}
+table.orderTable th {
+	background:#3399FF ;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #999999;
+}
+table.orderTable td {
+	background:#F5F5F5;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #999999;
+	max-width: 500px;
+	word-wrap: break-word;
+}
+

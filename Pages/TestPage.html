@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script id="customMessageTemplate" type="text/html">
+        <em class="customMessage" data-bind='validationMessage: field'></em>
+    </script>
+    <label>Test: <input data-bind='value: test' /></label>
+    <br />
+    <button type="button" data-bind='click: submit'>
+        Submit
+    </button>
+    <button type="button" data-bind='click: emptySomething'>Run it</button>
+    <script src="/Scripts/jquery-1.11.3.min.js"></script>
+    <script src="/Scripts/knockout_3_2_0.js"></script>
+    <script src="/Scripts/knockout.validation.js"></script>
+    <script>
+        $(document).ready(function () {
+            ko.validation.rules.pattern.message = 'Invalid.';
+
+
+            ko.validation.configure({
+                registerExtenders: true,
+                messagesOnModified: true,
+                insertMessages: true,
+                parseInputAttributes: true,
+                messageTemplate: null
+            });
+
+ 
+            var TestViewModel = function()
+            {
+                errors = ko.validation.group(this);
+                test = ko.observable().extend({ required: true });
+                
+              
+                 submit= function () {
+                    errors.showAllMessages();
+                 };
+                 emptySomething = function () {
+                     var item = {};
+                     item.Name = '';
+                     item.Somethingelse = 5;
+                     something(item);
+                 };
+            };
+           
+            ko.applyBindings(TestViewModel);
+         
+        });
+    </script>
+</body>
+</html>

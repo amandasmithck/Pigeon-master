@@ -1,0 +1,84 @@
+﻿body {
+		font-family: "Helvetica Neue", Helvetica, Arial,sans-serif;
+	}
+	
+h5 {color: #888888;}
+h4 {margin: 1em 0;}
+	
+.left {float:left;}
+.clear {clear:both;}
+.sub-description {color: #A0A0A0;font-size: 14px;}
+	
+.header {background: #fff;min-height:60px;margin: 20px 0;}
+.header img {max-height: 60px;}
+	#login-status {float:right;}
+
+#loading-overlay 
+{
+    display: none;
+    background: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    opacity: 0.8;
+}
+	
+.nav ul
+    {
+        padding-left: 0;
+        margin-left: 0;
+        background-color: #181818;
+        color: White;
+        float: left;
+        width: 100%;
+        font-family: arial, helvetica, sans-serif;
+        font-size: 12px;
+    }
+
+    .nav ul li { display: inline; }
+
+    .nav ul li a
+    {
+        padding: 0.2em 1em;
+        background-color: #181818;
+        color: White !important;
+        text-decoration: none !important;
+        float: left;
+        border-right: 1px solid #fff;
+        padding: 10px 20px;
+    }
+    .nav ul li a:hover, .nav ul .active a
+    {
+        background-color: #369;
+        color: #fff;
+    }
+    
+    .nav a:visited, a:link
+    {
+        text-decoration:none !important;
+    }
+
+#login-status{text-align: right;}
+
+#orderDetails thead
+{
+    background:lightblue;
+    
+}
+#orderDetails td
+{
+    min-width:70px;
+    margin: 5px;
+    padding: 3px;
+}
+
+#details 
+{
+    
+    width:1140px;
+      margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10px;
+
+}

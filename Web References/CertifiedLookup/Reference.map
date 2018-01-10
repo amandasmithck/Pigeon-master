@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://smtc.certifiedtransmission.com/app/WCF/External/Lookup.svc?disco" filename="Lookup.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://smtc.certifiedtransmission.com/app/WCF/External/Lookup.svc?wsdl=wsdl0" filename="Lookup.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://smtc.certifiedtransmission.com/app/WCF/External/Lookup.svc?xsd=xsd2" filename="Lookup.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://smtc.certifiedtransmission.com/app/WCF/External/Lookup.svc?xsd=xsd1" filename="Lookup0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://smtc.certifiedtransmission.com/app/WCF/External/Lookup.svc?wsdl" filename="Lookup0.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://smtc.certifiedtransmission.com/app/WCF/External/Lookup.svc?xsd=xsd3" filename="Lookup1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://smtc.certifiedtransmission.com/app/WCF/External/Lookup.svc?xsd=xsd0" filename="Lookup2.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

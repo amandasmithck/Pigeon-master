@@ -1,0 +1,87 @@
+﻿.searchbar select {width: 120px; padding: 4px;margin-bottom: 4px;}
+.searchbar label {width: 100%; font-size: 12px;}
+.searchbar input[type=submit] {width: 100%; padding: 4px;}
+
+.result 
+{
+    width:96%;
+    -moz-border-radius: 6px; border-radius: 6px;
+    border: 1px solid #D0D0D0;
+    padding:2%;
+    margin: 1em 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.result .checkout 
+{
+    background-color: #4a8ee5;
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #4a8ee5),color-stop(1, #3a75cc));
+    background-image: -moz-linear-gradient(top, #4a8ee5, #3a75cc);
+    width: 20%;
+    float: right;
+    text-align: center;
+    color: white;
+    padding: 0.6em;
+    cursor: pointer;
+}
+.result .checkout:hover{text-decoration:none;background-image:none;background-color:#55a0ff;}
+
+
+.result .details, .result .pricing, .result .loading-twirl
+{
+    position: relative;
+    display: none;
+    width: 28%;
+    float: left;
+}
+
+.pricing {width: 48%;float: left;}
+.pricing .local {border-bottom: 1px solid #CCC;padding-bottom: 16px;}
+
+.pricing label
+{
+	width: 50%;
+    display: inline-block;
+    float: left;
+}
+
+#pics {margin-top: 50px;}
+
+.result .loading-twirl
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.result .loading-twirl .loading-overlay
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /*background: white;*/
+}
+
+.result .loading-twirl img
+{ 
+    position: relative;
+    left: 110px;
+    top: 84px;
+}
+    
+.result > .overlay 
+{
+    position: absolute;
+    /*background: #EEE;*/
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: 5;
+}
+
+#order-diag label {width:280px;display:block;float:none;}

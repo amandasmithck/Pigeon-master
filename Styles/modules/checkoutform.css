@@ -1,0 +1,20 @@
+﻿.modal-body 
+{
+    max-height: 400px;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+    /*.empty-cart 
+    {
+        margin-top: 1em; border: 1px solid #DDD;
+        border-collapse: separate;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;padding: 8px;
+    }
+    .cart {margin-top: 1em;font-size: 10px;}
+    .cart table th{text-align:center;}
+    .cart .price {text-align: right;}
+    .cart .remove {cursor: pointer; max-height: 15px; max-width: 15px;}
+    .cart .cart-total {font-size: 12px;font-weight: bold;color: green;}*/

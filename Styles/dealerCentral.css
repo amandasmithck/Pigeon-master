@@ -1,0 +1,156 @@
+﻿@import "lionbars.css";
+body
+{
+    font-family:Arial;
+ background-color:#C0C0C0;
+}
+#container
+{
+    width:620px;
+    height:780px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:White;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+        padding:2px;
+}
+#map
+{
+    margin-left:auto;
+    margin-right:auto;
+    width:500px;
+    height:312px;
+    background-color:#C0C0C0;
+    overflow:hidden;
+    
+}
+#mapcontainer
+{
+    margin-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+    width:600px;
+    height:312px;
+    background-color:#C0C0C0;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    
+}
+#statecharts 
+{
+    margin-left:auto;
+    margin-right:auto;
+    height: 250px;
+    width:auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding:10px;
+
+}
+
+.chart 
+{
+    margin-left:auto;
+    margin-right:auto;
+    
+    width:520px;
+
+
+
+}
+
+
+
+#info p 
+{
+    font-size:14px;
+    text-align:center;
+}
+
+.hover
+{
+    display:none;
+}
+table
+{
+    margin-left:auto;
+    margin-right:auto;
+    width:auto;
+    font-size:12px;
+}
+table tr
+{
+    text-transform:capitalize;
+}
+table tr td
+{
+    padding:1px 4px 1px 4px;
+}
+
+h1
+{
+    font-size:18px;
+    text-align:center;
+    margin:0px;
+    padding:0px;
+    font-family:@Arial Unicode MS;
+}
+h2
+{
+    font-size:12px;
+    color:black;
+    text-align:left;
+    margin:0px;
+    padding:0px;
+}
+h4
+{
+    font-size:14px;
+    color:black;
+    text-align:center;
+    margin:0px;
+    padding:0px;
+}
+h3
+{
+    font-size:22px;
+    color:black;
+    text-align:center;
+    margin:0px;
+    padding:0px;
+}
+
+#maplabel
+{
+    color:Black;
+    font-size:12px;
+    text-align:center;
+}
+
+.chartlabel
+{
+    color:red;
+    font-size:10px;
+    text-align:left;
+    text-align:center;
+}
+
+.displaymap
+{
+    color:Blue;
+    font-size:12px;
+    text-decoration:underline;
+}
+#logo
+{
+    float:right;
+}
+
+.hyperion
+{
+    visibility:hidden;
+    width:0px;
+}

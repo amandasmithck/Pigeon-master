@@ -1,0 +1,6 @@
+﻿body {}
+.button {padding: 8px;width: 120px;margin: 4px 0;}
+.section {border-bottom: 1px solid #ccc;margin-bottom:1.2em;padding-bottom:0.8em;}
+.discounts h3 {color: #036;margin-top: 0.8em;}
+#discount-radios{font-size: 14px;width: 90%;}
+.small-form label {margin-top: 6px;}

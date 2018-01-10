@@ -1,0 +1,35 @@
+﻿.sidebar-search-form {}
+.sidebar-search-form select {width: 148px;margin-bottom: 10px;}
+.sidebar-search-form label {}
+.sidebar-search-form input[type=text] {margin-bottom: 10px;width:90%; margin-right: 10%; padding:4px; font-size: 14px;}
+.sidebar-search-form input[type=submit] {margin: 10px 0;float: left;}
+
+/*this needs to go in a separate css file*/
+.order-summary {
+    border: 1px solid #535353;
+    padding: 8px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background-color: #fff;
+    margin-top: 10px;
+    list-style: none;
+}
+.order-summary li {display: inline-block;width: 100%;padding: 5px 0;}
+
+.order-summary .title {padding: 0 0 10px 0;}
+.order-summary .headings {display:none;}
+
+.order-summary #msgEmpty p {font-size: 14px;font-style:italic;text-align:center;}
+
+.order-summary label {display: inline-block;float: left;font-size: 11px;}
+.order-summary .remove {width: 20%;}
+    .order-summary .remove img{cursor:pointer;height: 15px;width:15px;}
+    
+.order-summary .partnum { width: 50%; }
+.order-summary .price { width: 30%; text-align: right; }
+
+.order-summary .quant {padding-top: 20px;}
+.order-summary .total label {font-weight:bold; color: Green;}
+.order-summary .total label {font-size: 14px;}
+.order-summary .order button {display:none;padding: 8px;width: 100px;}

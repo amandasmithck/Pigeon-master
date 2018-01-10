@@ -1,0 +1,468 @@
+﻿.searchbar select {width: 120px; padding: 4px;margin-bottom: 4px;}
+.searchbar label {width: 100%; font-size: 12px;}
+.searchbar input[type=submit] {width: 100%; padding: 4px;}
+
+.result 
+{
+    width:96%;
+    -moz-border-radius: 6px; border-radius: 6px;
+    border: 1px solid #D0D0D0;
+    padding:2%;
+    margin: 1em 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.result h1 {min-width: 25%;float: left;margin-right: 1em;}
+
+.result .checkout 
+{
+    background-color: #4a8ee5;
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #4a8ee5),color-stop(1, #3a75cc));
+    background-image: -moz-linear-gradient(top, #4a8ee5, #3a75cc);
+    width:100px;
+    float:right;
+    text-align: center;
+    color: white;
+    padding: 0.6em;
+    cursor: pointer;
+    margin-right:52px;
+    display:block;
+}
+.result .checkout:hover{text-decoration:none;background-image:none;background-color:#55a0ff;}
+
+
+
+
+.result .details
+{
+    width: auto;
+    position: relative;
+    
+}
+
+.result .details table {border-collapse: collapse;}
+.result .details table .selected {background-color: #eee;}
+.result .details table th {font-size: 12px;text-align: left;padding: 6px 10px;}
+.result .details table td {padding: 2px 5px 2px 2px;}
+.result .details table {color: green;font-size: 26px;}
+.price {color: green;font-size: 12px;}
+.result .loading-twirl
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.details
+{
+ width: 100%;
+ height: 100%;
+    
+}
+.result .details .loading-twirl .loading-overlay
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /*background: white;*/
+}
+
+.result .details .loading-twirl img
+{ 
+    position: relative;
+    left: 110px;
+    top: 84px;
+}
+    
+.result > .overlay 
+{
+    position: absolute;
+    /*background: #EEE;*/
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    z-index: 5;
+}
+
+
+#Transmission
+{
+    border: 2px;
+    border-style:solid;
+    border-color:Black;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.part
+{
+    margin-bottom:50px;
+}
+
+#Transmission table tbody td
+{
+   width:150px;
+}
+
+#Transmission tr td
+{
+    text-align:left;
+}
+
+#Tblavailability .field
+{
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    text-align:left;
+}
+
+
+
+#Installation
+{
+    border: 2px;
+    border-style:solid;
+    border-color:Black;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#Pricing
+{
+    border: 2px;
+    border-style:solid;
+    border-color:Black;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.heading
+{
+    font-family:Arial;
+    font-size:16px;
+    font-weight:bold;
+    text-decoration:underline; 
+}
+    
+.headingCust
+{
+    font-family:Arial;
+    font-size:16px;
+    font-weight:bold;
+    text-decoration:underline; 
+}
+
+.entry
+{
+    font-family:Arial;
+    font-size:14px;
+    font-weight:normal;
+    
+    
+}
+
+.field
+{
+    font-family:Arial;
+    font-size:14px;
+    font-weight:bold;
+    text-align:left;
+}
+
+.details table thead
+{
+    font-family:Arial;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.details table
+{
+   padding:0px;
+    
+}
+
+.details table tbody td
+{
+   
+    
+}
+
+.details table tbody
+{
+    margin-left:100px;
+    margin-right:100px;
+    font-family:Arial;
+    font-size:12px;
+    font-weight:normal;
+    text-align:left;
+}
+
+#searchlabel
+{
+    width:600px;
+    margin-left:auto;
+    margin-right:auto;
+    color:Blue;
+    font-size:16px;
+    display:inline-block;
+}
+
+.tag
+{
+    margin-top:10px;
+    border: 2px;
+    border-style:solid;
+    border-color:#2554C7;
+    padding:4px;   
+    width:600px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.tag-odd
+{
+    margin-top:10px;
+    border: 2px;
+    border-style:solid;
+    border-color:#2554C7;
+    padding:4px;   
+}
+
+.tag-even
+{
+    margin-top:10px;
+    border: 2px;
+    border-style:solid;
+    border-color:#56A5EC;
+    padding:2px;   
+}
+
+.map
+{
+    display:inline;
+    float:left;
+    margin-left:0px;
+    width:290px;
+    overflow:hidden;
+}
+
+
+.right-info
+{
+    margin-left:auto;
+    width:310px;
+}
+
+.tbltrans
+{
+    display:inline;
+    padding-top:15px;
+    width:300px;
+}
+
+.tbltrans thead 
+{
+    border: 2px solid gray;
+}
+
+.tbltrans thead td
+{
+    color: Black;
+     border-right: none;
+    border-left: none;
+    
+}
+
+.tbltrans td
+{
+    color: Green;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    border-bottom: 1px solid gray;
+    text-align:center;
+}
+
+.appno 
+{
+    width: 90px;
+}
+.tagid 
+{
+    width: 45px;
+}
+.notes
+{
+    width: 152px;
+}
+
+
+.tblinstall
+{
+    border-style:solid;
+    border-color:Black;
+    width: 400px;
+}
+
+.tblinstall td
+{
+    width:auto;
+    text-transform:capitalize;
+}
+
+.tblinstall td.field
+{
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    text-align:left;
+    color:Black;
+}
+
+.tblinstall tbody
+{
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    text-align:left;
+    color:red;
+    overflow:scroll;
+}
+
+
+.tblpricing
+{
+   
+    margin-left:auto;
+    margin-right:auto;
+    padding: 10px;
+    width:600px;
+}
+
+
+
+.tblpricing td.field
+{
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    text-align:left;
+    color:Black;
+}
+
+.tblpricing tbody
+{
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    text-align:left;
+    color:Green;
+}
+
+.heading
+{
+    display:inline;
+    font-family:Arial;
+    font-size:14px;
+   
+}
+
+p.pricing-heading
+{
+    letter-spacing:15px;
+    font-weight:bold;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:-10px;
+    margin-top:-5px;
+
+}
+p.install-heading
+{
+    font-weight:bold;
+    margin-bottom:-10px;
+    margin-top:0px;
+    margin-left:2px;
+    font-size:18px;
+    color:red;
+    text-align:right;
+
+}
+
+.InstallTotal
+{
+   font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    text-align:left;
+    color:red;
+    text-transform:capitalize;
+}
+
+.SugTotalP
+{
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    text-align:left;
+    color:red;
+}
+
+.CostTotalP
+{
+    font-family:Arial;
+    font-size:12px;
+    font-weight:bold;
+    text-align:left;
+    color:red;
+}
+
+#NotAvailable 
+{
+    color:Red;
+    font-size: 20px;
+}
+
+.seprow
+{
+    background-color:black;
+    color:White;
+    font-weight:bold;
+}
+
+.selectlabel
+{
+    margin:0;
+    padding:0;
+    font-size:10px;
+    color:Blue;
+}
+
+.loader p
+{
+    font-size: 20px;
+    color:Blue;
+    padding: 2px;
+    text-transform:capitalize;
+}
+.loader img 
+{
+    float:left;
+    margin-right: 5px;
+}
+
+.core
+{
+    color:Black;font-size:11px
+}
+
+.zoomcontrols
+{
+    width:290px;
+}

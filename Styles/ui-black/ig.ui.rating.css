@@ -1,0 +1,9 @@
+﻿.ui-igrating-normal{}
+.ui-igrating-disabled{}
+.ui-igrating-active{}
+.ui-igrating-hover{}
+.ui-igrating-vote{}
+.ui-igrating-voteselected{}
+.ui-igrating-votehover{ opacity:0.3; filter:alpha(opacity=30); }
+.ui-igrating-votedisabled{}
+.ui-igrating-votedisabledselected{}

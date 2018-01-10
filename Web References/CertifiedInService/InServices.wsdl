@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://smtc.certifiedtransmission.com/app/services/external/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://smtc.certifiedtransmission.com/app/services/external/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://smtc.certifiedtransmission.com/app/services/external/">
+      <s:element name="GetInService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="uKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="uRO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="uSerial" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInServiceResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetInServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInService" />
+  </wsdl:message>
+  <wsdl:message name="GetInServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInServiceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="InServicesSoap">
+    <wsdl:operation name="GetInService">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">uKey, uRO and uSerial are required.</wsdl:documentation>
+      <wsdl:input message="tns:GetInServiceSoapIn" />
+      <wsdl:output message="tns:GetInServiceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InServicesSoap" type="tns:InServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetInService">
+      <soap:operation soapAction="http://smtc.certifiedtransmission.com/app/services/external/GetInService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="InServicesSoap12" type="tns:InServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetInService">
+      <soap12:operation soapAction="http://smtc.certifiedtransmission.com/app/services/external/GetInService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InServices">
+    <wsdl:port name="InServicesSoap" binding="tns:InServicesSoap">
+      <soap:address location="http://smtc.certifiedtransmission.com/app/services/external/InServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="InServicesSoap12" binding="tns:InServicesSoap12">
+      <soap12:address location="http://smtc.certifiedtransmission.com/app/services/external/InServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
